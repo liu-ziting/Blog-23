@@ -38,16 +38,16 @@ export default {
                     class: 'underlined underlined--reverse'
                 },
                 {
+                    title: '前端站点分享.',
+                    tag: 'Website',
+                    src: 'https://gamma.app/public/-8sse4vampaeyogm',
+                    class: 'underlined underlined--offset'
+                },
+                {
                     title: '优秀案例分享.',
                     tag: 'Case',
                     src: 'https://gamma.app/public/-u01r2v0m32l9t21',
                     class: 'underlined underlined--gradient'
-                },
-                {
-                    title: '前端站点分享.',
-                    tag: 'Website',
-                    src: 'https://gamma.app/docs/-8sse4vampaeyogm',
-                    class: 'underlined underlined--offset'
                 }
             ],
             isSwitched: false
@@ -65,7 +65,7 @@ export default {
 
 <style lang="scss" scoped>
 $white: rgba(255, 255, 255, 0.9);
-$black: #000000;
+$black: #161616;
 $yellow: rgbA(255, 255, 0, 1);
 $yellow05: rgbA(255, 255, 0, 0.5);
 .wrap {
@@ -96,7 +96,7 @@ $yellow05: rgbA(255, 255, 0, 0.5);
         height: 60px;
     }
     .underlined {
-        color: black;
+        color: $black;
         flex: 1;
         font-size: 2em;
         line-height: 1.2;
@@ -110,7 +110,7 @@ $yellow05: rgbA(255, 255, 0, 0.5);
             background-size: 100% 100%;
         }
         &--thin {
-            background-image: linear-gradient(to right, black 0, black 100%);
+            background-image: linear-gradient(to right, $black 0, $black 100%);
         }
         &--thick {
             background-position: 0 -0.3em;
@@ -133,7 +133,7 @@ $yellow05: rgbA(255, 255, 0, 0.5);
         margin: 0 0 50px;
         width: 100px;
         height: 10px;
-        background: #000;
+        background: $black;
         display: block;
         cursor: pointer;
     }

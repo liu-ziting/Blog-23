@@ -35,7 +35,7 @@ export default {
     z-index: -1;
 }
 .blacks {
-    background-color: #000000;
+    background-color: #161616;
 }
 .white {
     background-color: inherit;
