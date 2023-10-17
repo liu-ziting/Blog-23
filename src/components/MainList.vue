@@ -1,6 +1,6 @@
 <template>
-    <div class="wrap">
-        <span class="topBorder"></span>
+    <div :class="isSwitched ? 'wrap blacks' : 'wrap white'">
+        <span @click="blackAndWhite" class="topBorder"></span>
         <h1 class="typing">Liu Ziting</h1>
 
         <div class="box" v-for="(item, index) in list" :key="index">
@@ -49,7 +49,14 @@ export default {
                     src: 'https://gamma.app/docs/-8sse4vampaeyogm',
                     class: 'underlined underlined--offset'
                 }
-            ]
+            ],
+            isSwitched: false
+        }
+    },
+    methods: {
+        blackAndWhite() {
+            this.isSwitched = !this.isSwitched
+            this.$emit('blackAndWhite')
         }
     }
 }
@@ -57,8 +64,14 @@ export default {
 
 
 <style lang="scss" scoped>
+$white: rgba(255, 255, 255, 0.9);
+$black: #000000;
+$yellow: rgbA(255, 255, 0, 1);
+$yellow05: rgbA(255, 255, 0, 0.5);
 .wrap {
+    overflow: hidden;
     padding: 2% 20% 6% 20%;
+    box-sizing: border-box;
     .box {
         margin-top: 3rem;
     }
@@ -88,7 +101,7 @@ export default {
         font-size: 2em;
         line-height: 1.2;
         text-decoration: none;
-        background-image: linear-gradient(to right, yellow 0, yellow 100%);
+        background-image: linear-gradient(to right, $yellow 0, $yellow 100%);
         background-position: 0 1.2em;
         background-size: 0 100%;
         background-repeat: no-repeat;
@@ -104,16 +117,16 @@ export default {
         }
         &--offset {
             background-position: 0 0.2em;
-            box-shadow: inset 0 -0.5em 0 0 white;
+            box-shadow: inset 0 -0.5em 0 0 $white;
         }
         &--gradient {
             background-position: 0 -0.1em;
-            background-image: linear-gradient(to right, yellow 0, lightgreen 100%);
+            background-image: linear-gradient(to right, $yellow 0, lightgreen 100%);
         }
         &--reverse {
             background-position: 100% -0.1em;
             transition: background 1s; //yep, that's a long link
-            background-image: linear-gradient(to right, yellow 0, yellow 100%);
+            background-image: linear-gradient(to right, $yellow 0, $yellow 100%);
         }
     }
     .topBorder {
@@ -122,6 +135,7 @@ export default {
         height: 10px;
         background: #000;
         display: block;
+        cursor: pointer;
     }
 }
 
@@ -141,6 +155,62 @@ export default {
         padding: 10%;
         .underlined {
             font-size: 1.5rem;
+        }
+    }
+}
+
+.blacks {
+    .topBorder {
+        background: $white;
+    }
+    .typing {
+        color: $white;
+    }
+    .wrap {
+        .underlined {
+            color: $white;
+            background-image: linear-gradient(to right, $yellow 0, $yellow05 100%);
+            &--offset {
+                background-position: 0 0.2em;
+                box-shadow: inset 0 -0.5em 0 0 $black;
+            }
+            &--gradient {
+                background-position: 0 -0.1em;
+                background-image: linear-gradient(to right, $yellow05 0, lightgreen 100%);
+            }
+            &--reverse {
+                background-position: 100% -0.1em;
+                transition: background 1s; //yep, that's a long link
+                background-image: linear-gradient(to right, $yellow05 0, $yellow05 100%);
+            }
+        }
+    }
+}
+
+.white {
+    .topBorder {
+        background: $black;
+    }
+    .typing {
+        color: $black;
+    }
+    .wrap {
+        .underlined {
+            color: $black;
+            background-image: linear-gradient(to right, $yellow 0, $yellow 100%);
+            &--offset {
+                background-position: 0 0.2em;
+                box-shadow: inset 0 -0.5em 0 0 $white;
+            }
+            &--gradient {
+                background-position: 0 -0.1em;
+                background-image: linear-gradient(to right, $yellow 0, lightgreen 100%);
+            }
+            &--reverse {
+                background-position: 100% -0.1em;
+                transition: background 1s; //yep, that's a long link
+                background-image: linear-gradient(to right, $yellow 0, $yellow 100%);
+            }
         }
     }
 }
