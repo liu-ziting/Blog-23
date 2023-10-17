@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <main-list />
         <canvas class="canvas"></canvas>
+        <main-list />
     </div>
 </template>
 

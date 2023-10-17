@@ -1,7 +1,7 @@
 <template>
     <div class="wrap">
         <span class="topBorder"></span>
-        <h1>Liu Ziting</h1>
+        <h1 class="typing">Liu Ziting.</h1>
         <div class="box" v-for="(item, index) in list" :key="index">
             <h2>{{ item.tag }}</h2>
             <p>
@@ -74,7 +74,13 @@ export default {
     h2 {
         color: grey;
     }
-
+    .typing {
+        width: 11ch;
+        animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        height: 60px;
+    }
     .underlined {
         color: black;
         flex: 1;
@@ -116,6 +122,18 @@ export default {
         height: 10px;
         background: #000;
         display: block;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
     }
 }
 @media only screen and (max-width: 767px) {
