@@ -32,19 +32,19 @@ export default {
                     class: 'underlined underlined--thick'
                 },
                 {
-                    title: 'Cursor 一个集成了GPT-4的编辑器.',
+                    title: 'Cursor一个集成了GPT-4的编辑器.',
                     tag: 'Cursor.GPT',
                     src: 'https://paragraph.xyz/@lzt/preview/1LlkQGo7MJ8nOyUx9JVV',
                     class: 'underlined underlined--reverse'
                 },
                 {
-                    title: '前端站点分享.',
+                    title: '前端工具类网站.',
                     tag: 'Website',
                     src: 'https://gamma.app/public/-8sse4vampaeyogm',
                     class: 'underlined underlined--offset'
                 },
                 {
-                    title: '优秀案例分享.',
+                    title: '优秀网站案例.',
                     tag: 'Case',
                     src: 'https://gamma.app/public/-u01r2v0m32l9t21',
                     class: 'underlined underlined--gradient'
@@ -66,8 +66,8 @@ export default {
 <style lang="scss" scoped>
 $white: rgba(255, 255, 255, 0.9);
 $black: #161616;
-$yellow: rgbA(255, 255, 0, 1);
-$yellow05: rgbA(255, 255, 0, 0.5);
+$yellow: rgba(255, 255, 0, 1);
+$yellow05: rgba(255, 255, 0, 0.5);
 .wrap {
     overflow: hidden;
     padding: 2% 20% 6% 20%;
@@ -87,6 +87,7 @@ $yellow05: rgbA(255, 255, 0, 0.5);
     }
     h2 {
         color: grey;
+        font-family: 'Source Code Pro', sans-serif;
     }
     .typing {
         width: 14ch;
@@ -94,6 +95,7 @@ $yellow05: rgbA(255, 255, 0, 0.5);
         white-space: nowrap;
         overflow: hidden;
         height: 60px;
+        font-family: 'Source Code Pro', sans-serif;
     }
     .underlined {
         color: $black;
@@ -106,6 +108,7 @@ $yellow05: rgbA(255, 255, 0, 0.5);
         background-size: 0 100%;
         background-repeat: no-repeat;
         transition: background 0.5s;
+        letter-spacing: 3px;
         &:hover {
             background-size: 100% 100%;
         }
