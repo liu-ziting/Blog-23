@@ -1,106 +1,113 @@
 <template>
     <div id="app">
-        <div class="wrap">
-            <div class="box" v-for="(item, index) in list" :key="index">
-                <h2>{{ item.tag }}</h2>
-                <p>
-                    <a :href="item.src" target="_blank" :class="item.class">{{ item.title }}</a>
-                </p>
-            </div>
-        </div>
+        <main-list />
+        <canvas class="canvas"></canvas>
     </div>
 </template>
 
 <script>
+import MainList from './components/MainList.vue'
 export default {
     name: 'App',
-    components: {},
-    data() {
-        return {
-            list: [
-                {
-                    title: 'Chatgpt3.5+Vercel，零代码在线部署到云端.',
-                    tag: 'GPT.Vercel',
-                    src: 'https://paragraph.xyz/@lzt/preview/9RCkzzDpDakfx6Qof3Qd',
-                    class: 'underlined underlined--thin'
-                },
-                {
-                    title: 'Vercel+Railway部署Typecho动态博客.',
-                    tag: 'Vercel.Railway',
-                    src: 'https://paragraph.xyz/@lzt/preview/z2wfOEx5417LB22TOxy4',
-                    class: 'underlined underlined--thick'
-                },
-                {
-                    title: 'Cursor 一个集成了GPT-4的编辑器.',
-                    tag: 'Cursor',
-                    src: 'https://paragraph.xyz/@lzt/preview/1LlkQGo7MJ8nOyUx9JVV',
-                    class: 'underlined underlined--offset'
-                },
-                {
-                    title: '优秀案例分享.',
-                    tag: 'Case',
-                    src: 'https://gamma.app/public/-u01r2v0m32l9t21',
-                    class: 'underlined underlined--gradient'
-                },
-                {
-                    title: '前端站点分享.',
-                    tag: 'Website',
-                    src: 'https://gamma.app/docs/-8sse4vampaeyogm',
-                    class: 'underlined underlined--reverse'
-                }
-            ]
+    components: { MainList },
+    mounted() {
+        const canvas = document.querySelector('canvas')
+        const ctx = canvas.getContext('2d')
+
+        // for intro motion
+        let mouseMoved = false
+
+        const pointer = {
+            x: 0.5 * window.innerWidth,
+            y: 0.5 * window.innerHeight
+        }
+        const params = {
+            pointsNumber: 40,
+            widthFactor: 0.3,
+            mouseThreshold: 0.6,
+            spring: 0.4,
+            friction: 0.5
+        }
+
+        const trail = new Array(params.pointsNumber)
+        for (let i = 0; i < params.pointsNumber; i++) {
+            trail[i] = {
+                x: pointer.x,
+                y: pointer.y,
+                dx: 0,
+                dy: 0
+            }
+        }
+
+        window.addEventListener('click', e => {
+            updateMousePosition(e.pageX, e.pageY)
+        })
+        window.addEventListener('mousemove', e => {
+            mouseMoved = true
+            updateMousePosition(e.pageX, e.pageY)
+        })
+        window.addEventListener('touchmove', e => {
+            mouseMoved = true
+            updateMousePosition(e.targetTouches[0].pageX, e.targetTouches[0].pageY)
+        })
+
+        function updateMousePosition(eX, eY) {
+            pointer.x = eX
+            pointer.y = eY
+        }
+
+        setupCanvas()
+        update(0)
+        window.addEventListener('resize', setupCanvas)
+
+        function update(t) {
+            // for intro motion
+            if (!mouseMoved) {
+                pointer.x = (0.5 + 0.3 * Math.cos(0.002 * t) * Math.sin(0.005 * t)) * window.innerWidth
+                pointer.y = (0.5 + 0.2 * Math.cos(0.005 * t) + 0.1 * Math.cos(0.01 * t)) * window.innerHeight
+            }
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            trail.forEach((p, pIdx) => {
+                const prev = pIdx === 0 ? pointer : trail[pIdx - 1]
+                const spring = pIdx === 0 ? 0.4 * params.spring : params.spring
+                p.dx += (prev.x - p.x) * spring
+                p.dy += (prev.y - p.y) * spring
+                p.dx *= params.friction
+                p.dy *= params.friction
+                p.x += p.dx
+                p.y += p.dy
+            })
+
+            ctx.beginPath()
+            ctx.moveTo(trail[0].x, trail[0].y)
+
+            for (let i = 1; i < trail.length - 1; i++) {
+                const xc = 0.5 * (trail[i].x + trail[i + 1].x)
+                const yc = 0.5 * (trail[i].y + trail[i + 1].y)
+                ctx.quadraticCurveTo(trail[i].x, trail[i].y, xc, yc)
+                ctx.lineWidth = params.widthFactor * (params.pointsNumber - i)
+                ctx.stroke()
+            }
+            ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y)
+            ctx.stroke()
+
+            window.requestAnimationFrame(update)
+        }
+
+        function setupCanvas() {
+            canvas.width = window.innerWidth
+            canvas.height = window.innerHeight
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-.wrap {
-    padding: 10% 20%;
-    .box {
-        margin-top: 3rem;
-    }
-    .box:first-child {
-        margin: 0;
-    }
-    h2 {
-        color: grey;
-    }
-
-    .underlined {
-        color: black;
-        flex: 1;
-        font-size: 2em;
-        line-height: 1.2;
-        text-decoration: none;
-        background-image: linear-gradient(to right, yellow 0, yellow 100%);
-        background-position: 0 1.2em;
-        background-size: 0 100%;
-        background-repeat: no-repeat;
-        transition: background 0.5s;
-        &:hover {
-            background-size: 100% 100%;
-        }
-        &--thin {
-            background-image: linear-gradient(to right, black 0, black 100%);
-        }
-        &--thick {
-            background-position: 0 -0.3em;
-        }
-        &--offset {
-            background-position: 0 0.2em;
-            //didn't find another solution than mask the underline shape by a box shadow with the same color than the bg
-            box-shadow: inset 0 -0.5em 0 0 white;
-        }
-        &--gradient {
-            background-position: 0 -0.1em;
-            background-image: linear-gradient(to right, yellow 0, lightgreen 100%);
-        }
-        &--reverse {
-            background-position: 100% -0.1em;
-            transition: background 1s; //yep, that's a long link
-            background-image: linear-gradient(to right, yellow 0, yellow 100%);
-        }
-    }
+.canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 </style>
