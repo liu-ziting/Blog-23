@@ -1,7 +1,8 @@
 <template>
     <div class="wrap">
         <span class="topBorder"></span>
-        <h1 class="typing">Liu Ziting.</h1>
+        <h1 class="typing">Liu Ziting</h1>
+
         <div class="box" v-for="(item, index) in list" :key="index">
             <h2>{{ item.tag }}</h2>
             <p>
@@ -26,15 +27,15 @@ export default {
                 },
                 {
                     title: 'Vercel+Railway部署Typecho动态博客.',
-                    tag: 'Vercel.Railway',
+                    tag: 'Vercel.Railway.Typecho',
                     src: 'https://paragraph.xyz/@lzt/preview/z2wfOEx5417LB22TOxy4',
                     class: 'underlined underlined--thick'
                 },
                 {
                     title: 'Cursor 一个集成了GPT-4的编辑器.',
-                    tag: 'Cursor',
+                    tag: 'Cursor.GPT',
                     src: 'https://paragraph.xyz/@lzt/preview/1LlkQGo7MJ8nOyUx9JVV',
-                    class: 'underlined underlined--offset'
+                    class: 'underlined underlined--reverse'
                 },
                 {
                     title: '优秀案例分享.',
@@ -46,7 +47,7 @@ export default {
                     title: '前端站点分享.',
                     tag: 'Website',
                     src: 'https://gamma.app/docs/-8sse4vampaeyogm',
-                    class: 'underlined underlined--reverse'
+                    class: 'underlined underlined--offset'
                 }
             ]
         }
@@ -75,8 +76,8 @@ export default {
         color: grey;
     }
     .typing {
-        width: 11ch;
-        animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+        width: 14ch;
+        animation: typing 2s steps(11), blink 0.5s step-end infinite alternate;
         white-space: nowrap;
         overflow: hidden;
         height: 60px;
@@ -103,7 +104,6 @@ export default {
         }
         &--offset {
             background-position: 0 0.2em;
-            //didn't find another solution than mask the underline shape by a box shadow with the same color than the bg
             box-shadow: inset 0 -0.5em 0 0 white;
         }
         &--gradient {
