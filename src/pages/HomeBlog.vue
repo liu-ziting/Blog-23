@@ -527,7 +527,7 @@ export default {
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
     color: #3d5358;
-    max-width: 780px;
+    padding: 2% 20% 6% 20%;
     margin: 0 auto;
 
     &__list {
@@ -541,6 +541,7 @@ export default {
 @media only screen and (max-width: 767px) {
     .content {
         width: 100%;
+        padding: 0;
     }
 }
 .company {
@@ -630,7 +631,7 @@ export default {
     }
 
     &__slogan {
-        height: 2rem;
+        height: 3rem;
         text-align: left;
         font-weight: 400;
         text-transform: capitalize;
