@@ -254,15 +254,6 @@ export default {
                     keywords: ['在线录屏', '视频', '视频编辑']
                 },
                 {
-                    id: '11',
-                    name: 'Nginx配置',
-                    country: 'nginx',
-                    link: 'https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN',
-                    rating: 8.2,
-                    slogan: 'nginx可视化配置',
-                    keywords: ['nginx', '配置', '可视化']
-                },
-                {
                     id: '12',
                     name: 'Logseq',
                     country: '知识库',
@@ -308,7 +299,7 @@ export default {
                     keywords: ['AI', '导航站']
                 },
                 {
-                    id: '16',
+                    id: '17',
                     name: 'Framer',
                     country: 'AI',
                     link: 'https://framer.com/',
@@ -317,7 +308,7 @@ export default {
                     keywords: ['AI', '原型', '生成代码', '自定义页面']
                 },
                 {
-                    id: '17',
+                    id: '18',
                     name: 'Ailandingpage',
                     country: 'AI',
                     link: 'https://www.ailandingpagegenerator.com/',
@@ -326,7 +317,7 @@ export default {
                     keywords: ['AI', '生成代码', '自定义页面']
                 },
                 {
-                    id: '18',
+                    id: '19',
                     name: 'Noya.io',
                     country: 'AI',
                     link: 'https://www.noya.io/app/',
@@ -335,7 +326,7 @@ export default {
                     keywords: ['AI', '生成代码', '自定义页面']
                 },
                 {
-                    id: '19',
+                    id: '20',
                     name: 'v0.dev',
                     country: 'AI',
                     link: 'https://v0.dev/',
@@ -344,7 +335,7 @@ export default {
                     keywords: ['AI', '生成代码']
                 },
                 {
-                    id: '20',
+                    id: '21',
                     name: 'Midjourney',
                     country: '教程',
                     link: 'https://tob-design.yuque.com/kxcufk/mj/',
@@ -353,7 +344,7 @@ export default {
                     keywords: ['AI绘画', '教程']
                 },
                 {
-                    id: '21',
+                    id: '22',
                     name: 'StableDiffusion',
                     country: '教程',
                     link: 'https://tob-design.yuque.com/kxcufk/sd',
@@ -362,7 +353,7 @@ export default {
                     keywords: ['AI绘画', '教程']
                 },
                 {
-                    id: '22',
+                    id: '23',
                     name: 'Tailwindcss',
                     country: 'CSS',
                     link: 'https://www.tailwindcss.cn/',
@@ -371,7 +362,7 @@ export default {
                     keywords: ['CSS', '框架']
                 },
                 {
-                    id: '23',
+                    id: '24',
                     name: 'Getpapercss',
                     country: 'CSS',
                     link: 'https://www.getpapercss.com/',
@@ -380,7 +371,7 @@ export default {
                     keywords: ['CSS', '框架', '手绘风']
                 },
                 {
-                    id: '24',
+                    id: '25',
                     name: 'Chartscss',
                     country: '图表',
                     link: 'https://chartscss.org/',
@@ -389,7 +380,7 @@ export default {
                     keywords: ['CSS', '框架', '图表', 'Chart']
                 },
                 {
-                    id: '25',
+                    id: '26',
                     name: 'Hellogithub',
                     country: '阅读',
                     link: 'https://hellogithub.com/',
@@ -398,13 +389,23 @@ export default {
                     keywords: ['Github', '阅读', '项目', '开源', '发现创意']
                 },
                 {
-                    id: '26',
+                    id: '27',
                     name: 'Producthunt',
                     country: '阅读',
                     link: 'https://www.producthunt.com/',
                     rating: 8.8,
                     slogan: '一个线上社区和平台，旨在向用户展示新兴科技产品、应用程序和创意项目',
                     keywords: ['社区', '阅读', '发现创意', '开源']
+                },
+
+                {
+                    id: '28',
+                    name: 'Nginx配置',
+                    country: 'nginx',
+                    link: 'https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN',
+                    rating: 8.2,
+                    slogan: 'nginx可视化配置',
+                    keywords: ['nginx', '配置', '可视化']
                 }
             ]
         }
