@@ -1,29 +1,23 @@
 <template>
-    <div id="app" :class="isSwitched ? 'blacks' : 'white'">
+    <div id="app">
         <canvas class="canvas"></canvas>
-        <main-list @blackAndWhite="blackAndWhite" />
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
 import canvasMotion from './utils/canvas-motion.js'
-import MainList from './components/MainList.vue'
 export default {
     name: 'App',
-    components: { MainList },
+    components: {},
     data() {
-        return {
-            isSwitched: false
-        }
+        return {}
     },
-    methods: {
-        blackAndWhite() {
-            this.isSwitched = !this.isSwitched
-        }
-    },
+    methods: {},
     mounted() {
         canvasMotion.start()
-    }
+    },
+    created() {}
 }
 </script>
 
@@ -32,12 +26,6 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
-}
-.blacks {
-    background-color: #161616;
-}
-.white {
-    background-color: inherit;
+    pointer-events: none;
 }
 </style>
