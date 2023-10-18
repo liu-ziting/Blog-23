@@ -1,7 +1,7 @@
 <template>
-    <div :class="isSwitched ? 'wrap blacks' : 'wrap white'">
-        <span @click="blackAndWhite" class="topBorder"></span>
-        <h1 class="typing">Liu Ziting</h1>
+    <div class="wrap">
+        <span class="topBorder"></span>
+        <!-- <h1 class="typing">Liu Ziting</h1> -->
         <div class="box" v-for="(item, index) in list" :key="index">
             <h2>{{ item.tag }}</h2>
             <p>
@@ -47,15 +47,10 @@ export default {
                     src: 'https://gamma.app/public/-u01r2v0m32l9t21',
                     class: 'underlined underlined--gradient'
                 }
-            ],
-            isSwitched: false
+            ]
         }
     },
-    methods: {
-        blackAndWhite() {
-            this.isSwitched = !this.isSwitched
-        }
-    }
+    methods: {}
 }
 </script>
 
@@ -110,7 +105,7 @@ $yellow05: rgba(255, 255, 0, 0.5);
             background-size: 100% 100%;
         }
         &--thin {
-            background-image: linear-gradient(to right, $black 0, $black 100%);
+            background-image: linear-gradient(to right, $yellow 0, $yellow 100%);
         }
         &--thick {
             background-position: 0 -0.3em;
@@ -155,59 +150,6 @@ $yellow05: rgba(255, 255, 0, 0.5);
         padding: 10%;
         .underlined {
             font-size: 1.5rem;
-        }
-    }
-}
-
-.blacks {
-    background-color: #161616;
-    .topBorder {
-        background: $white;
-    }
-    .typing {
-        color: $white;
-    }
-    .underlined {
-        color: $white;
-        background-image: linear-gradient(to right, $yellow 0, $yellow05 100%);
-        &--offset {
-            background-position: 0 0.2em;
-            box-shadow: inset 0 -0.5em 0 0 $black;
-        }
-        &--gradient {
-            background-position: 0 -0.1em;
-            background-image: linear-gradient(to right, $yellow05 0, lightgreen 100%);
-        }
-        &--reverse {
-            background-position: 100% -0.1em;
-            transition: background 1s; //yep, that's a long link
-            background-image: linear-gradient(to right, $yellow05 0, $yellow05 100%);
-        }
-    }
-}
-.white {
-    background-color: #ffffff;
-    .topBorder {
-        background: $black;
-    }
-    .typing {
-        color: $black;
-    }
-    .underlined {
-        color: $black;
-        background-image: linear-gradient(to right, $yellow 0, $yellow 100%);
-        &--offset {
-            background-position: 0 0.2em;
-            box-shadow: inset 0 -0.5em 0 0 $white;
-        }
-        &--gradient {
-            background-position: 0 -0.1em;
-            background-image: linear-gradient(to right, $yellow 0, lightgreen 100%);
-        }
-        &--reverse {
-            background-position: 100% -0.1em;
-            transition: background 1s; //yep, that's a long link
-            background-image: linear-gradient(to right, $yellow 0, $yellow 100%);
         }
     }
 }

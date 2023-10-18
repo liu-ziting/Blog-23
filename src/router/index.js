@@ -5,10 +5,14 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
+            component: () => import('@/pages/HomeBlog.vue')
+        },
+        {
+            path: '/Article',
             component: () => import('@/pages/MainList.vue')
         },
         {
-            path: '/about',
+            path: '/About',
             component: () => import('@/pages/AboutMine.vue')
         }
     ]

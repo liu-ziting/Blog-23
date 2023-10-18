@@ -1,7 +1,20 @@
 <template>
     <div id="app">
         <canvas class="canvas"></canvas>
-        <router-view></router-view>
+        <nav>
+            <router-link to="/">
+                <a href="javascript:;">Home</a>
+            </router-link>
+            <router-link to="/Article">
+                <a href="javascript:;">Article</a>
+            </router-link>
+            <router-link to="/About">
+                <a href="javascript:;">About</a>
+            </router-link>
+        </nav>
+        <div class="main">
+            <router-view></router-view>
+        </div>
     </div>
 </template>
 
@@ -27,5 +40,78 @@ export default {
     top: 0;
     left: 0;
     pointer-events: none;
+}
+.main {
+    margin-top: 5rem;
+}
+nav {
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    top: 20px;
+}
+nav a {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #16151b;
+    margin: 0 15px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+nav a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #16151b;
+    top: 47%;
+    animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+nav a:hover:before {
+    animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+@keyframes in {
+    0% {
+        width: 0;
+        left: 0;
+        right: auto;
+    }
+    100% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}
+@keyframes out {
+    0% {
+        width: 100%;
+        left: auto;
+        right: 0;
+    }
+    100% {
+        width: 0;
+        left: auto;
+        right: 0;
+    }
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@for $i from 1 through 5 {
+    nav a:nth-child(#{$i}) {
+        animation: show 0.2s #{$i * 0.1+1}s ease 1 both;
+    }
 }
 </style>

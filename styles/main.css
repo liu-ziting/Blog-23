@@ -134,3 +134,22 @@ body {
     height: 8px;
     cursor: pointer;
 }
+
+.wrap {
+    overflow: hidden;
+    padding: 2% 20% 6% 20%;
+    box-sizing: border-box;
+
+    h1 {
+        font-size: 3.3rem;
+        font-weight: 200;
+        letter-spacing: -0.1rem;
+        text-indent: -2px;
+    }
+
+    h2 {
+        color: grey;
+        font-family: 'Source Code Pro', sans-serif;
+    }
+
+}
