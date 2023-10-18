@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import canvasMotion from './utils/canvas-motion.js'
+// import canvasMotion from './utils/canvas-motion.js'
 export default {
     name: 'App',
     components: {},
@@ -28,7 +28,7 @@ export default {
     },
     methods: {},
     mounted() {
-        canvasMotion.start()
+        // canvasMotion.start()
     },
     created() {}
 }
@@ -44,36 +44,48 @@ export default {
 .main {
     margin-top: 5rem;
 }
+.thx {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+}
 nav {
     width: 100%;
     position: fixed;
     text-align: center;
-    top: 20px;
+    height: 40px;
+    padding-top: 20px;
+    top: 0;
+    line-height: 40px;
+    background-color: #fff;
+    z-index: 999;
+    a {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #16151b;
+        margin: 0 10px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        position: relative;
+        display: inline-block;
+    }
+    a:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #16151b;
+        top: 47%;
+        animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+    }
+    a:hover:before {
+        animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+    }
 }
-nav a {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #16151b;
-    margin: 0 15px;
-    font-size: 16px;
-    letter-spacing: 1px;
-    position: relative;
-    display: inline-block;
-}
-nav a:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background: #16151b;
-    top: 47%;
-    animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
-}
-nav a:hover:before {
-    animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
-}
+
 @keyframes in {
     0% {
         width: 0;

@@ -58,7 +58,7 @@ export default {
 <style lang="scss" scoped>
 $white: rgba(255, 255, 255, 0.9);
 $black: #161616;
-$yellow: rgba(255, 255, 0, 1);
+$yellow: #ffff00;
 $yellow05: rgba(255, 255, 0, 0.5);
 .wrap {
     overflow: hidden;
@@ -92,7 +92,7 @@ $yellow05: rgba(255, 255, 0, 0.5);
     .underlined {
         color: $black;
         flex: 1;
-        font-size: 2em;
+        font-size: 1.8em;
         line-height: 1.2;
         text-decoration: none;
         background-image: linear-gradient(to right, $yellow 0, $yellow 100%);
