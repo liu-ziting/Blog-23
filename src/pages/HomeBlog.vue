@@ -161,7 +161,7 @@ export default {
                     link: 'https://vercel.com/',
                     rating: 9,
                     slogan: '用于托管、构建和部署静态网站和单页面应用程序',
-                    keywords: ['部署平台', '代码托管', '博客']
+                    keywords: ['部署平台', '代码托管', '静态网站托管', '博客']
                 },
                 {
                     id: '2',
@@ -234,6 +234,15 @@ export default {
                     rating: 8,
                     slogan: '一个手绘版SVG图标的网站',
                     keywords: ['图标', 'SVG', '免费下载', '免登录']
+                },
+                {
+                    id: '91',
+                    name: 'Iconfont',
+                    country: '图标',
+                    link: 'https://www.iconfont.cn/',
+                    rating: 8.9,
+                    slogan: '阿里巴巴矢量图标库',
+                    keywords: ['图标', 'SVG', '免费下载']
                 },
                 {
                     id: '10',
