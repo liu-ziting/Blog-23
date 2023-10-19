@@ -5,7 +5,10 @@
         <div class="box" v-for="(item, index) in list" :key="index">
             <h2>{{ item.tag }}</h2>
             <p>
-                <a :href="item.src" target="_blank" :class="item.class">{{ item.title }}</a>
+                <a :href="item.src" target="_blank" :class="item.class">
+                    {{ index + 1 }}.
+                    {{ item.title }}
+                </a>
             </p>
         </div>
     </div>

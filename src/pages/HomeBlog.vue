@@ -111,8 +111,8 @@
                     <ul class="company__details">
                         <li class="company__data">
                             <label class="company__label">类型</label>
-                            <p class="company__country" @click="clearFilter('countries', company.country)">
-                                {{ company.country }}
+                            <p class="company__type" @click="clearFilter('countries', company.type)">
+                                {{ company.type }}
                             </p>
                         </li>
 
@@ -148,7 +148,7 @@ export default {
                 {
                     id: '0',
                     name: 'Codepen',
-                    country: '代码',
+                    type: '代码',
                     link: 'https://codepen.io',
                     rating: 9.9,
                     slogan: '在线代码编辑器和前端开发社区，发掘特效创意',
@@ -157,7 +157,7 @@ export default {
                 {
                     id: '1',
                     name: 'Vercel',
-                    country: '部署平台',
+                    type: '部署平台',
                     link: 'https://vercel.com/',
                     rating: 9,
                     slogan: '用于托管、构建和部署静态网站和单页面应用程序',
@@ -166,7 +166,7 @@ export default {
                 {
                     id: '2',
                     name: 'Netlify',
-                    country: '部署平台',
+                    type: '部署平台',
                     link: 'https://app.netlify.com/',
                     rating: 8,
                     slogan: '一款基于云服务的静态网站托管和自动化部署平台',
@@ -175,7 +175,7 @@ export default {
                 {
                     id: '3',
                     name: 'Render',
-                    country: '部署平台',
+                    type: '部署平台',
                     link: 'https://dashboard.render.com/',
                     rating: 7,
                     slogan: '一个轻量级云服务器平台',
@@ -184,7 +184,7 @@ export default {
                 {
                     id: '4',
                     name: 'Gamma',
-                    country: '演示',
+                    type: '演示',
                     link: 'https://gamma.app/',
                     rating: 9.5,
                     slogan: '一个能颠覆现有PPT制作的网站',
@@ -193,7 +193,7 @@ export default {
                 {
                     id: '5',
                     name: 'Onemodel',
-                    country: '流程图',
+                    type: '流程图',
                     link: 'https://www.onemodel.app/',
                     rating: 7,
                     slogan: '软件架构师专用绘图工具',
@@ -202,7 +202,7 @@ export default {
                 {
                     id: '6',
                     name: 'Tldraw',
-                    country: '画板',
+                    type: '画板',
                     link: 'https://www.tldraw.com/',
                     rating: 6,
                     slogan: '开源在线画板',
@@ -211,7 +211,7 @@ export default {
                 {
                     id: '7',
                     name: 'Paragraph',
-                    country: '写作',
+                    type: '写作',
                     link: 'https://paragraph.xyz/notes',
                     rating: 7.5,
                     slogan: '提供在线写作和协作功能的网站',
@@ -220,7 +220,7 @@ export default {
                 {
                     id: '8',
                     name: 'Iconbuddy',
-                    country: '图标',
+                    type: '图标',
                     link: 'https://iconbuddy.app/',
                     rating: 8,
                     slogan: '免费icon素材图标库，可修改颜色',
@@ -229,7 +229,7 @@ export default {
                 {
                     id: '9',
                     name: 'Heroicons',
-                    country: 'SVG图标',
+                    type: 'SVG图标',
                     link: 'https://heroicons.com/',
                     rating: 8,
                     slogan: '一个手绘版SVG图标的网站',
@@ -238,7 +238,7 @@ export default {
                 {
                     id: '91',
                     name: 'Iconfont',
-                    country: '图标',
+                    type: '图标',
                     link: 'https://www.iconfont.cn/',
                     rating: 8.9,
                     slogan: '阿里巴巴矢量图标库',
@@ -247,7 +247,7 @@ export default {
                 {
                     id: '10',
                     name: 'Recordscreen',
-                    country: '录屏',
+                    type: '录屏',
                     link: 'https://recordscreen.io/',
                     rating: 8.5,
                     slogan: '免登录在线录屏网站',
@@ -256,7 +256,7 @@ export default {
                 {
                     id: '11',
                     name: 'Loom',
-                    country: '录屏',
+                    type: '录屏',
                     link: 'https://www.loom.com/',
                     rating: 9,
                     slogan: '在线网页录屏与视频通话协作工具',
@@ -265,7 +265,7 @@ export default {
                 {
                     id: '12',
                     name: 'Logseq',
-                    country: '知识库',
+                    type: '知识库',
                     link: 'https://logseq.com/',
                     rating: 8.7,
                     slogan: '开源知识库管理系统',
@@ -274,7 +274,7 @@ export default {
                 {
                     id: '13',
                     name: 'Aicolors',
-                    country: '颜色',
+                    type: '颜色',
                     link: 'https://aicolors.co/',
                     rating: 8.4,
                     slogan: '获取网站配置方案实例，一句话找到完美的网站配色方案',
@@ -283,7 +283,7 @@ export default {
                 {
                     id: '14',
                     name: 'Gradientlab',
-                    country: '渐变色',
+                    type: '渐变色',
                     link: 'https://gradientlab.space/',
                     rating: 7.8,
                     slogan: '一拖即得渐变色CSS，轻松实现炫酷效果',
@@ -292,7 +292,7 @@ export default {
                 {
                     id: '15',
                     name: 'AI工具集',
-                    country: 'AI导航站',
+                    type: 'AI导航站',
                     link: 'https://ai-bot.cn/',
                     rating: 7,
                     slogan: '探索AI导航站发现数百个AI工具，帮助您自动化高效完成任务',
@@ -301,7 +301,7 @@ export default {
                 {
                     id: '16',
                     name: 'Aihub',
-                    country: 'AI导航站',
+                    type: 'AI导航站',
                     link: 'https://www.aihub.cn/',
                     rating: 7,
                     slogan: '发现优质AI站点、内含资源工具、资讯等集合',
@@ -310,7 +310,7 @@ export default {
                 {
                     id: '17',
                     name: 'Framer',
-                    country: 'AI',
+                    type: 'AI',
                     link: 'https://framer.com/',
                     rating: 8.9,
                     slogan: '提供了一个直观的界面，使用户能够通过拖放元素、添加动画效果和手势交互来构建原型',
@@ -319,7 +319,7 @@ export default {
                 {
                     id: '18',
                     name: 'Ailandingpage',
-                    country: 'AI',
+                    type: 'AI',
                     link: 'https://www.ailandingpagegenerator.com/',
                     rating: 8,
                     slogan: '一种利用人工智能（AI）技术的营销页面，旨在提高用户转化率和优化营销效果',
@@ -328,7 +328,7 @@ export default {
                 {
                     id: '19',
                     name: 'Noya.io',
-                    country: 'AI',
+                    type: 'AI',
                     link: 'https://www.noya.io/app/',
                     rating: 8.4,
                     slogan: '​NoyaIo通过在线自定义拖拽生成页面，并导出代码、图片、Figma等',
@@ -337,7 +337,7 @@ export default {
                 {
                     id: '20',
                     name: 'v0.dev',
-                    country: 'AI',
+                    type: 'AI',
                     link: 'https://v0.dev/',
                     rating: 9.2,
                     slogan: 'Vercel平台正在内测的AI生成页面平台，最终可达到一句话生成并部署到​Vercel平台',
@@ -346,7 +346,7 @@ export default {
                 {
                     id: '21',
                     name: 'Midjourney',
-                    country: '教程',
+                    type: '教程',
                     link: 'https://tob-design.yuque.com/kxcufk/mj/',
                     rating: 9,
                     slogan: '探索由 AI 创造的绘画作品，带你进入无限的艺术世界',
@@ -355,7 +355,7 @@ export default {
                 {
                     id: '22',
                     name: 'StableDiffusion',
-                    country: '教程',
+                    type: '教程',
                     link: 'https://tob-design.yuque.com/kxcufk/sd',
                     rating: 9,
                     slogan: '发现由 AI 生成的令人惊叹的绘画作品，追寻创意的无边界',
@@ -364,7 +364,7 @@ export default {
                 {
                     id: '23',
                     name: 'Tailwindcss',
-                    country: 'CSS',
+                    type: 'CSS',
                     link: 'https://www.tailwindcss.cn/',
                     rating: 7.8,
                     slogan: '只需书写HTML代码，无需书写CSS，即可快速构建美观的网站',
@@ -373,7 +373,7 @@ export default {
                 {
                     id: '24',
                     name: 'Getpapercss',
-                    country: 'CSS',
+                    type: 'CSS',
                     link: 'https://www.getpapercss.com/',
                     rating: 7.2,
                     slogan: '手绘风格css框架，打造手绘风格',
@@ -382,7 +382,7 @@ export default {
                 {
                     id: '25',
                     name: 'Chartscss',
-                    country: '图表',
+                    type: '图表',
                     link: 'https://chartscss.org/',
                     rating: 6.5,
                     slogan: '使用 CSS 实用工具类将 HTML 设计图表',
@@ -391,7 +391,7 @@ export default {
                 {
                     id: '26',
                     name: 'Hellogithub',
-                    country: '阅读',
+                    type: '阅读',
                     link: 'https://hellogithub.com/',
                     rating: 8.8,
                     slogan: '发现和分享有趣、入门级开源项目的平台',
@@ -400,7 +400,7 @@ export default {
                 {
                     id: '27',
                     name: 'Producthunt',
-                    country: '阅读',
+                    type: '阅读',
                     link: 'https://www.producthunt.com/',
                     rating: 8.8,
                     slogan: '一个线上社区和平台，旨在向用户展示新兴科技产品、应用程序和创意项目',
@@ -410,7 +410,7 @@ export default {
                 {
                     id: '28',
                     name: 'Nginx配置',
-                    country: 'nginx',
+                    type: 'nginx',
                     link: 'https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN',
                     rating: 8.2,
                     slogan: 'nginx可视化配置',
@@ -428,9 +428,9 @@ export default {
         list() {
             let { countries, categories } = this.activeFilters
 
-            return this.companies.filter(({ country, keywords, rating }) => {
+            return this.companies.filter(({ type, keywords, rating }) => {
                 if (rating < this.filters.rating) return false
-                if (countries.length && !~countries.indexOf(country)) return false
+                if (countries.length && !~countries.indexOf(type)) return false
                 return !categories.length || categories.every(cat => ~keywords.indexOf(cat))
             })
         },
@@ -494,8 +494,8 @@ export default {
 
     beforeMount() {
         this.companies = this.dataList
-        this.companies.forEach(({ country, keywords, rating }) => {
-            this.$set(this.filters.countries, country, false)
+        this.companies.forEach(({ type, keywords, rating }) => {
+            this.$set(this.filters.countries, type, false)
             if (this.rating.max < rating) this.rating.max = rating
             if (this.rating.min > rating) {
                 this.rating.min = rating
@@ -511,8 +511,8 @@ export default {
         //     .then(companies => {
         //         this.companies = companies
 
-        //         companies.forEach(({ country, keywords, rating }) => {
-        //             this.$set(this.filters.countries, country, false)
+        //         companies.forEach(({ type, keywords, rating }) => {
+        //             this.$set(this.filters.countries, type, false)
 
         //             if (this.rating.max < rating) this.rating.max = rating
         //             if (this.rating.min > rating) {
@@ -656,10 +656,10 @@ export default {
         background-color: rgba(#c5d0d1, 0.1);
         border-top: 1px solid #c5d0d1;
     }
-    &__country {
+    &__type {
         font-size: 0.8rem;
     }
-    &__country:hover {
+    &__type:hover {
         text-decoration: underline;
         cursor: pointer;
     }
