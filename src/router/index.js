@@ -14,6 +14,10 @@ const router = new VueRouter({
         {
             path: '/About',
             component: () => import('@/pages/AboutMine.vue')
+        },
+        {
+            path: '/Project',
+            component: () => import('@/pages/ProjectList.vue')
         }
     ]
 });
