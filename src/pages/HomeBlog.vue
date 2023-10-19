@@ -406,7 +406,6 @@ export default {
                     slogan: '一个线上社区和平台，旨在向用户展示新兴科技产品、应用程序和创意项目',
                     keywords: ['社区', '阅读', '发现创意', '开源']
                 },
-
                 {
                     id: '28',
                     name: 'Nginx配置',
@@ -415,6 +414,61 @@ export default {
                     rating: 8.2,
                     slogan: 'nginx可视化配置',
                     keywords: ['nginx', '配置', '可视化']
+                },
+
+                {
+                    id: '29',
+                    name: '免费GPT',
+                    type: 'AI',
+                    link: 'https://c.binjie.fun',
+                    rating: 8.9,
+                    slogan: '第三方个人代理免登录使用GPT',
+                    keywords: ['AI', 'GPT', '免登录']
+                },
+                {
+                    id: '30',
+                    name: '文心一言',
+                    type: 'AI',
+                    link: 'https://yiyan.baidu.com/',
+                    rating: 8.1,
+                    slogan: '百度全新一代知识增强大语言模型，高效便捷地帮助人们获取信息、知识和灵感',
+                    keywords: ['AI']
+                },
+                {
+                    id: '31',
+                    name: '通义千问',
+                    type: 'AI',
+                    link: 'https://qianwen.aliyun.com/',
+                    rating: 8.2,
+                    slogan: '阿里云推出的一个超大规模的语言模型，功能包括多轮对话、文案创作、逻辑推理、多模态理解、多语言支持',
+                    keywords: ['AI']
+                },
+                {
+                    id: '32',
+                    name: 'Claude',
+                    type: 'AI',
+                    link: 'https://claude.ai',
+                    rating: 9.5,
+                    slogan: '人工智能初创公司Anthropic发布的一款类似ChatGPT的产品，免费使用，可传文件',
+                    keywords: ['AI']
+                },
+                {
+                    id: '33',
+                    name: 'XlangAI',
+                    type: 'AI',
+                    link: 'https://chat.xlang.ai/zh',
+                    rating: 8.8,
+                    slogan: 'LLM-powered 大模型',
+                    keywords: ['AI']
+                },
+                {
+                    id: '34',
+                    name: 'LLaVA大模型',
+                    type: 'AI',
+                    link: 'https://llava.hliu.cc/',
+                    rating: 9,
+                    slogan: 'LLaVA大模型，目前免费可识别图片中的内容',
+                    keywords: ['AI']
                 }
             ]
         }

@@ -21,11 +21,11 @@ export default {
             faqList: [
                 {
                     title: '收录的网站推荐度是如何确定的？',
-                    content: '根据个人的使用体验和主观评分来确定网站的推荐度'
+                    content: '网站的推荐度是根据个人的使用体验和主观评分来确定的'
                 },
                 {
                     title: '博客平台是用什么框架构建的？',
-                    content: 'VUE，UI效果自己手撸，网站分类纯前端查询'
+                    content: '博客平台使用VUE框架构建，UI效果自己手撸，网站分类纯前端查询'
                 },
                 {
                     title: '该项目部署在什么平台？',
@@ -33,7 +33,7 @@ export default {
                 },
                 {
                     title: '怎样帮助我一起扩充网站的收录？',
-                    content: '发送邮件到：liuziting2014@163.com'
+                    content: '如果你希望一起扩充网站的收录，可以发送邮件到：liuziting2014@163.com'
                 }
             ]
         }
