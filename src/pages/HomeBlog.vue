@@ -58,7 +58,7 @@
                     </li>
                     <li class="nav__label nav__label--clear" @click="clearAllFilters">Clear all</li>
                 </menu>
-                <p>网站数量：{{ dataList.length + 1 }}</p>
+                <!-- <p>网站数量：{{ dataList.length + 1 }}</p> -->
             </nav>
             <transition-group name="dropdown" tag="section" class="dropdown" :style="dropdown">
                 <menu
