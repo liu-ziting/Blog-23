@@ -1,5 +1,6 @@
 <template>
     <div class="wrap">
+        <canvas class="canvas"></canvas>
         <span class="topBorder"></span>
         <!-- <h1 class="typing">Liu Ziting</h1> -->
         <div class="box" v-for="(item, index) in list" :key="index">
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+import canvasMotion from '../utils/canvas-motion.js'
 export default {
     name: 'MainList',
     data() {
@@ -53,7 +55,9 @@ export default {
             ]
         }
     },
-    methods: {}
+    mounted() {
+        canvasMotion.start()
+    }
 }
 </script>
 
@@ -63,6 +67,13 @@ $white: rgba(255, 255, 255, 0.9);
 $black: #161616;
 $yellow: #ffff00;
 $yellow05: rgba(255, 255, 0, 0.5);
+.canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999;
+}
 .wrap {
     overflow: hidden;
     padding: 2% 20% 6% 20%;

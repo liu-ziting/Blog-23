@@ -181,7 +181,6 @@ export default {
     watch: {
         activeMenu(index, from) {
             if (index === from) return
-
             this.$nextTick(() => {
                 if (!this.$refs.menu || !this.$refs.menu[index]) {
                     this.dropdown.height = 0
@@ -237,9 +236,9 @@ export default {
                 this.$set(this.filters.categories, category, false)
             })
         })
-        this.$nextTick(() => {
+        setTimeout(() => {
             this.loading = false
-        })
+        }, 900)
     }
 }
 </script>

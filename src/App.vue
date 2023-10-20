@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-        <!-- <canvas class="canvas"></canvas> -->
         <nav>
             <router-link to="/" :class="{ active: $route.path === '/' }">
                 <a href="javascript:;">Home</a>
@@ -15,33 +14,52 @@
         <div class="main">
             <router-view></router-view>
         </div>
+        <svg
+            v-show="backToTop"
+            @click="scrollToTop"
+            class="backToTop"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+        >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18" />
+        </svg>
     </div>
 </template>
 
 <script>
-// import canvasMotion from './utils/canvas-motion.js'
 export default {
     name: 'App',
     components: {},
     data() {
-        return {}
+        return {
+            backToTop: false
+        }
     },
-    methods: {},
     mounted() {
-        // canvasMotion.start()
+        window.addEventListener('scroll', this.handleScroll)
     },
-    created() {}
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.handleScroll)
+    },
+    methods: {
+        handleScroll() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+            this.backToTop = scrollTop > 100
+        },
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-.canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 99999;
-}
 .main {
     margin-top: 5rem;
 }
@@ -89,7 +107,14 @@ nav {
         animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
     }
 }
-
+.backToTop {
+    width: 30px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99999;
+    cursor: pointer;
+}
 @keyframes in {
     0% {
         width: 0;
