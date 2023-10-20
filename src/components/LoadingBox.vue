@@ -17,7 +17,6 @@
 export default {}
 </script>
 
-
 <style lang="scss" scoped>
 $black: #000;
 $white: #fff;
@@ -51,7 +50,6 @@ $white: #fff;
     font-weight: 300;
     white-space: nowrap;
     &::before {
-        // For dot
         @include pseudo;
         z-index: 1;
         top: 40px;
@@ -68,7 +66,6 @@ $white: #fff;
         color: $black;
         letter-spacing: 8px;
         &:nth-child(1) {
-            // For the letter "L"
             transform-origin: 100% 70%;
             transform: scale(1, 1.275);
             &::before {
@@ -83,7 +80,6 @@ $white: #fff;
             }
         }
         &:nth-child(5) {
-            // For the letter "i"
             transform-origin: 100% 70%;
             animation: letterStretch 1800ms cubic-bezier(0.25, 0.23, 0.73, 0.75) infinite;
             &::before {
@@ -98,7 +94,6 @@ $white: #fff;
     }
 }
 
-// For the dot
 @keyframes dotMove {
     0%,
     100% {
@@ -109,7 +104,6 @@ $white: #fff;
     }
 }
 
-// For the letter "i"
 @keyframes letterStretch {
     0%,
     100% {
@@ -136,7 +130,6 @@ $white: #fff;
     }
 }
 
-// For the letter "L"
 @keyframes lineStretch {
     0%,
     45%,
