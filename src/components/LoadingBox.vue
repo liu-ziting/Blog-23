@@ -20,20 +20,16 @@ export default {}
 <style lang="scss" scoped>
 $black: #000;
 $white: #fff;
-
 @mixin pseudo($content: '') {
     position: absolute;
     content: $content;
 }
-
 #container {
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    margin-left: -117px;
-    transform: scale(0.725);
+    margin-left: -138.5px;
 }
-
 .divider {
     position: absolute;
     z-index: 2;
@@ -43,7 +39,6 @@ $white: #fff;
     height: 15px;
     background: $white;
 }
-
 .loading-text {
     position: relative;
     font-size: 3.75rem;
@@ -93,7 +88,6 @@ $white: #fff;
         }
     }
 }
-
 @keyframes dotMove {
     0%,
     100% {
@@ -103,7 +97,6 @@ $white: #fff;
         transform: rotate(0deg) translate(-111px, 10px) rotate(0deg);
     }
 }
-
 @keyframes letterStretch {
     0%,
     100% {
@@ -129,7 +122,6 @@ $white: #fff;
         transform-origin: 100% 75%;
     }
 }
-
 @keyframes lineStretch {
     0%,
     45%,
@@ -151,18 +143,6 @@ $white: #fff;
     }
     68% {
         transform: scaleY(0.18);
-    }
-}
-
-@media (min-width: 48rem) {
-    #container {
-        transform: scale(0.725rem);
-    }
-}
-
-@media (min-width: 62rem) {
-    #container {
-        transform: scale(0.85);
     }
 }
 </style>

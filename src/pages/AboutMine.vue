@@ -71,7 +71,7 @@ export default {
     }
 
     .panel-title {
-        font-size: 24px;
+        font-size: 22px;
         width: 100%;
         position: relative;
         margin: 0;
@@ -102,6 +102,7 @@ export default {
     .plus {
         position: absolute;
         margin-left: 20px;
+        margin-top: -3px;
         z-index: 5;
         font-size: 42px;
         line-height: 100%;
