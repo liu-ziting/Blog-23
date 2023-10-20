@@ -559,26 +559,6 @@ export default {
                 this.$set(this.filters.categories, category, false)
             })
         })
-
-        // fetch('https://s3-us-west-2.amazonaws.com/s.cdpn.io/450744/mock-data.json')
-        //     .then(response => response.json())
-        //     .then(companies => {
-        //         this.companies = companies
-
-        //         companies.forEach(({ type, keywords, rating }) => {
-        //             this.$set(this.filters.countries, type, false)
-
-        //             if (this.rating.max < rating) this.rating.max = rating
-        //             if (this.rating.min > rating) {
-        //                 this.rating.min = rating
-        //                 this.filters.rating = rating
-        //             }
-
-        //             keywords.forEach(category => {
-        //                 this.$set(this.filters.categories, category, false)
-        //             })
-        //         })
-        //     })
     }
 }
 </script>

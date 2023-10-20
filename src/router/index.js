@@ -18,6 +18,10 @@ const router = new VueRouter({
         {
             path: '/Project',
             component: () => import('@/pages/ProjectList.vue')
+        },
+        {
+            path: '/PicCat',
+            component: () => import('@/pages/PicCat.vue')
         }
     ]
 });

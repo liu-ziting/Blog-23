@@ -3,46 +3,15 @@
         <div class="card-container">
             <div
                 class="card"
-                style="
-                    --image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/448976/berlin.jpg');
-                    --angle: -5deg;
-                    --x: 5%;
-                    --y: 15%;
-                    --caption: 'Berlin in 2009';
-                "
-            ></div>
-
-            <div
-                class="card"
-                style="
-                    --image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/448976/london.jpg');
-                    --angle: -1deg;
-                    --x: -10%;
-                    --y: -20%;
-                    --caption: 'London, 2001';
-                "
-            ></div>
-
-            <div
-                class="card"
-                style="
-                    --image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/448976/los-angeles.jpg');
-                    --angle: -4deg;
-                    --x: -20%;
-                    --y: 5%;
-                    --caption: 'Los Angeles - 2004';
-                "
-            ></div>
-
-            <div
-                class="card"
-                style="
-                    --image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/448976/italy.jpg');
-                    --angle: 7deg;
-                    --x: 10%;
-                    --y: -7%;
-                    --caption: 'Venice, 1999';
-                "
+                v-for="(item, index) in data"
+                :key="index"
+                :style="{
+                    '--image': `url(${require('@/assets/11/' + item.image + '')})`,
+                    '--angle': item.angle,
+                    '--x': item.x,
+                    '--y': item.y,
+                    '--caption': item.caption
+                }"
             ></div>
         </div>
     </div>
@@ -50,6 +19,54 @@
 
 <script>
 export default {
+    data() {
+        return {
+            data: [
+                {
+                    image: '1.jpg',
+                    angle: '-5deg',
+                    x: '5%',
+                    y: '15%',
+                    caption: ''
+                },
+                {
+                    image: '2.jpg',
+                    angle: '-1deg',
+                    x: '-10%',
+                    y: '-20%',
+                    caption: ''
+                },
+                {
+                    image: '3.jpg',
+                    angle: '-4deg',
+                    x: '-20%',
+                    y: '-5%',
+                    caption: ''
+                },
+                {
+                    image: '4.jpg',
+                    angle: '7deg',
+                    x: '10%',
+                    y: '-7%',
+                    caption: ''
+                },
+                {
+                    image: '5.jpg',
+                    angle: '-13deg',
+                    x: '28%',
+                    y: '14%',
+                    caption: ''
+                },
+                {
+                    image: '6.jpg',
+                    angle: '6deg',
+                    x: '30%',
+                    y: '-24%',
+                    caption: ''
+                }
+            ]
+        }
+    },
     mounted() {}
 }
 </script>

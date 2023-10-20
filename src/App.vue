@@ -11,6 +11,9 @@
             <router-link to="/About">
                 <a href="javascript:;">About</a>
             </router-link>
+            <router-link to="/PicCat">
+                <a href="javascript:;">PicCat</a>
+            </router-link>
         </nav>
         <div class="main">
             <router-view></router-view>
