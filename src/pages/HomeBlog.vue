@@ -202,7 +202,6 @@ export default {
                 }, 100)
             }
         },
-
         clearFilter(filter, except, active) {
             if (filter === 'rating') {
                 this.filters[filter] = this.rating.min
@@ -212,11 +211,9 @@ export default {
                 })
             }
         },
-
         clearAllFilters() {
             Object.keys(this.filters).forEach(this.clearFilter)
         },
-
         setMenu(menu, active) {
             Object.keys(this.menus).forEach(tab => {
                 this.menus[tab] = !active && tab === menu
@@ -363,7 +360,7 @@ export default {
         text-align: left;
         font-weight: 400;
         text-transform: capitalize;
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 20px;
     }
 
@@ -499,7 +496,8 @@ export default {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-
+    max-height: 270px;
+    overflow-y: scroll;
     &__item {
         margin-top: 0.5rem;
         margin-right: 0.5rem;

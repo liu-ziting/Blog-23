@@ -670,7 +670,7 @@
         ]
     },
     {
-        "name": "QR Code Generator",
+        "name": "QRCode",
         "type": "二维码生成",
         "link": "https://www.the-qrcode-generator.com/",
         "rating": 8,
@@ -681,7 +681,7 @@
         ]
     },
     {
-        "name": "CSS Scan",
+        "name": "CSSScan",
         "type": "CSS解析",
         "link": "https://getcssscan.com/",
         "rating": 8.5,
@@ -692,7 +692,7 @@
         ]
     },
     {
-        "name": "SmallDev.tools",
+        "name": "SmallDev",
         "type": "开发工具",
         "link": "https://smalldev.tools/",
         "rating": 9,

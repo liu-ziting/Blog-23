@@ -1,14 +1,14 @@
 <template>
     <div id="app">
-        <canvas class="canvas"></canvas>
+        <!-- <canvas class="canvas"></canvas> -->
         <nav>
-            <router-link to="/">
+            <router-link to="/" :class="{ active: $route.path === '/' }">
                 <a href="javascript:;">Home</a>
             </router-link>
-            <router-link to="/Article">
+            <router-link to="/Article" :class="{ active: $route.path === '/Article' }">
                 <a href="javascript:;">Article</a>
             </router-link>
-            <router-link to="/About">
+            <router-link to="/About" :class="{ active: $route.path === '/About' }">
                 <a href="javascript:;">About</a>
             </router-link>
         </nav>
@@ -40,6 +40,7 @@ export default {
     top: 0;
     left: 0;
     pointer-events: none;
+    z-index: 99999;
 }
 .main {
     margin-top: 5rem;
@@ -82,6 +83,9 @@ nav {
         animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
     }
     a:hover:before {
+        animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+    }
+    .active:before {
         animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
     }
 }
