@@ -1,6 +1,7 @@
 <template>
     <div>
-        <main id="app" class="content">
+        <loading-box v-if="loading" />
+        <main v-else id="app" class="content">
             <nav class="nav">
                 <menu class="nav__controls">
                     <li
@@ -58,7 +59,6 @@
                     <li class="nav__label nav__label--clear" @click="clearAllFilters">Clear all</li>
                 </menu>
             </nav>
-
             <transition-group name="dropdown" tag="section" class="dropdown" :style="dropdown">
                 <menu
                     v-for="(options, filter) in filters"
@@ -128,11 +128,13 @@
 </template>
 
 <script>
+import LoadingBox from '@/components/LoadingBox.vue'
 export default {
-    components: {},
+    components: { LoadingBox },
 
     data() {
         return {
+            loading: true,
             modal: false,
             companies: [],
             dropdown: { height: 0 },
@@ -558,6 +560,10 @@ export default {
             keywords.forEach(category => {
                 this.$set(this.filters.categories, category, false)
             })
+        })
+
+        this.$nextTick(() => {
+            this.loading = false
         })
     }
 }
