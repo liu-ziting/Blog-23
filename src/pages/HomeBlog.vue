@@ -99,7 +99,7 @@
             </transition-group>
 
             <transition-group name="company" tag="ul" class="content__list">
-                <li class="company" v-for="(company, index) in list" :key="index">
+                <li class="company" v-for="(company, index) in list" :key="index" @click="openLink(company.link)">
                     <div class="company__info">
                         <h2 class="company__name">
                             <a :href="company.link" target="_blank">
@@ -221,6 +221,9 @@ export default {
             Object.keys(this.menus).forEach(tab => {
                 this.menus[tab] = !active && tab === menu
             })
+        },
+        openLink(link) {
+            window.open(link)
         }
     },
 
@@ -269,6 +272,7 @@ export default {
     }
 }
 .company {
+    cursor: pointer;
     position: relative;
     width: calc(100% / 2 - 1rem);
     display: inline-flex;
@@ -359,7 +363,7 @@ export default {
         text-align: left;
         font-weight: 400;
         text-transform: capitalize;
-        font-size: 0.8rem;
+        font-size: 1rem;
         line-height: 20px;
     }
 
