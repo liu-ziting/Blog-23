@@ -99,8 +99,8 @@
             </transition-group>
 
             <transition-group name="company" tag="ul" class="content__list">
-                <li class="company" v-for="(company, index) in list" :key="index" @click="openLink(company.link)">
-                    <div class="company__info">
+                <li class="company" v-for="(company, index) in list" :key="index">
+                    <div class="company__info" @click="openLink(company.link)">
                         <h2 class="company__name">
                             <a :href="company.link" target="_blank">
                                 {{ company.name }}
@@ -269,7 +269,6 @@ export default {
     }
 }
 .company {
-    cursor: pointer;
     position: relative;
     width: calc(100% / 2 - 1rem);
     display: inline-flex;
@@ -331,6 +330,7 @@ export default {
     }
 
     &__info {
+        cursor: pointer;
         padding: 0 0.75rem;
         text-align: center;
     }
