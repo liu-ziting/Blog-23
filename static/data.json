@@ -1,0 +1,749 @@
+[
+    {
+        "name": "Codepen",
+        "type": "代码",
+        "link": "https://codepen.io",
+        "rating": 9.9,
+        "slogan": "在线代码编辑器和前端开发社区,发掘特效创意",
+        "keywords": [
+            "社区",
+            "阅读",
+            "发现创意",
+            "开源",
+            "代码",
+            "特效"
+        ]
+    },
+    {
+        "name": "Vercel",
+        "type": "部署平台",
+        "link": "https://vercel.com/",
+        "rating": 9,
+        "slogan": "用于托管、构建和部署静态网站和单页面应用程序",
+        "keywords": [
+            "部署平台",
+            "代码托管",
+            "静态网站托管",
+            "博客"
+        ]
+    },
+    {
+        "name": "Netlify",
+        "type": "部署平台",
+        "link": "https://app.netlify.com/",
+        "rating": 8,
+        "slogan": "一款基于云服务的静态网站托管和自动化部署平台",
+        "keywords": [
+            "部署平台",
+            "自动化部署",
+            "静态网站托管",
+            "云服务",
+            "博客"
+        ]
+    },
+    {
+        "name": "Render",
+        "type": "部署平台",
+        "link": "https://dashboard.render.com/",
+        "rating": 7,
+        "slogan": "一个轻量级云服务器平台",
+        "keywords": [
+            "部署平台",
+            "自动化部署",
+            "静态网站托管",
+            "云服务",
+            "博客"
+        ]
+    },
+    {
+        "name": "Gamma",
+        "type": "演示",
+        "link": "https://gamma.app/",
+        "rating": 9.5,
+        "slogan": "一个能颠覆现有PPT制作的网站",
+        "keywords": [
+            "在线演示",
+            "PPT",
+            "AI文档",
+            "分享",
+            "多人协作"
+        ]
+    },
+    {
+        "name": "Onemodel",
+        "type": "流程图",
+        "link": "https://www.onemodel.app/",
+        "rating": 7,
+        "slogan": "软件架构师专用绘图工具",
+        "keywords": [
+            "流程图",
+            "绘图"
+        ]
+    },
+    {
+        "name": "Tldraw",
+        "type": "画板",
+        "link": "https://www.tldraw.com/",
+        "rating": 6,
+        "slogan": "开源在线画板",
+        "keywords": [
+            "画板",
+            "流程图",
+            "多人协作"
+        ]
+    },
+    {
+        "name": "Paragraph",
+        "type": "写作",
+        "link": "https://paragraph.xyz/notes",
+        "rating": 7.5,
+        "slogan": "提供在线写作和协作功能的网站",
+        "keywords": [
+            "在线写作",
+            "博客",
+            "多人协作"
+        ]
+    },
+    {
+        "name": "Iconbuddy",
+        "type": "图标",
+        "link": "https://iconbuddy.app/",
+        "rating": 8,
+        "slogan": "免费icon素材图标库,可修改颜色",
+        "keywords": [
+            "图标",
+            "SVG",
+            "免费下载",
+            "免登录"
+        ]
+    },
+    {
+        "name": "Heroicons",
+        "type": "SVG图标",
+        "link": "https://heroicons.com/",
+        "rating": 8,
+        "slogan": "一个手绘版SVG图标的网站",
+        "keywords": [
+            "图标",
+            "SVG",
+            "免费下载",
+            "免登录"
+        ]
+    },
+    {
+        "name": "Iconfont",
+        "type": "图标",
+        "link": "https://www.iconfont.cn/",
+        "rating": 8.9,
+        "slogan": "阿里巴巴矢量图标库",
+        "keywords": [
+            "图标",
+            "SVG",
+            "免费下载"
+        ]
+    },
+    {
+        "name": "Recordscreen",
+        "type": "录屏",
+        "link": "https://recordscreen.io/",
+        "rating": 8.5,
+        "slogan": "免登录在线录屏网站",
+        "keywords": [
+            "在线录屏",
+            "视频",
+            "免登录"
+        ]
+    },
+    {
+        "name": "Loom",
+        "type": "录屏",
+        "link": "https://www.loom.com/",
+        "rating": 9,
+        "slogan": "在线网页录屏与视频通话协作工具",
+        "keywords": [
+            "在线录屏",
+            "视频",
+            "视频编辑"
+        ]
+    },
+    {
+        "name": "Logseq",
+        "type": "知识库",
+        "link": "https://logseq.com/",
+        "rating": 8.7,
+        "slogan": "开源知识库管理系统",
+        "keywords": [
+            "开源",
+            "知识库",
+            "博客"
+        ]
+    },
+    {
+        "name": "Aicolors",
+        "type": "颜色",
+        "link": "https://aicolors.co/",
+        "rating": 8.4,
+        "slogan": "获取网站配置方案实例,一句话找到完美的网站配色方案",
+        "keywords": [
+            "颜色",
+            "AI",
+            "配色"
+        ]
+    },
+    {
+        "name": "Gradientlab",
+        "type": "渐变色",
+        "link": "https://gradientlab.space/",
+        "rating": 7.8,
+        "slogan": "一拖即得渐变色CSS,轻松实现炫酷效果",
+        "keywords": [
+            "颜色",
+            "配色",
+            "渐变色"
+        ]
+    },
+    {
+        "name": "AI工具集",
+        "type": "AI导航站",
+        "link": "https://ai-bot.cn/",
+        "rating": 7,
+        "slogan": "探索AI导航站发现数百个AI工具,帮助您自动化高效完成任务",
+        "keywords": [
+            "AI",
+            "导航站"
+        ]
+    },
+    {
+        "id": "16",
+        "name": "Aihub",
+        "type": "AI导航站",
+        "link": "https://www.aihub.cn/",
+        "rating": 7,
+        "slogan": "发现优质AI站点、内含资源工具、资讯等集合",
+        "keywords": [
+            "AI",
+            "导航站"
+        ]
+    },
+    {
+        "name": "Framer",
+        "type": "AI",
+        "link": "https://framer.com/",
+        "rating": 8.9,
+        "slogan": "提供了一个直观的界面,使用户能够通过拖放元素、添加动画效果和手势交互来构建原型",
+        "keywords": [
+            "AI",
+            "原型",
+            "生成代码",
+            "自定义页面"
+        ]
+    },
+    {
+        "name": "Ailandingpage",
+        "type": "AI",
+        "link": "https://www.ailandingpagegenerator.com/",
+        "rating": 8,
+        "slogan": "一种利用人工智能(AI)技术的营销页面,旨在提高用户转化率和优化营销效果",
+        "keywords": [
+            "AI",
+            "生成代码",
+            "自定义页面"
+        ]
+    },
+    {
+        "id": "19",
+        "name": "Noya.io",
+        "type": "AI",
+        "link": "https://www.noya.io/app/",
+        "rating": 8.4,
+        "slogan": "​NoyaIo通过在线自定义拖拽生成页面,并导出代码、图片、Figma等",
+        "keywords": [
+            "AI",
+            "生成代码",
+            "自定义页面"
+        ]
+    },
+    {
+        "name": "v0.dev",
+        "type": "AI",
+        "link": "https://v0.dev/",
+        "rating": 9.2,
+        "slogan": "Vercel平台正在内测的AI生成页面平台,最终可达到一句话生成并部署到​Vercel平台",
+        "keywords": [
+            "AI",
+            "生成代码"
+        ]
+    },
+    {
+        "name": "Midjourney",
+        "type": "教程",
+        "link": "https://tob-design.yuque.com/kxcufk/mj/",
+        "rating": 9,
+        "slogan": "探索由 AI 创造的绘画作品,带你进入无限的艺术世界",
+        "keywords": [
+            "AI绘画",
+            "教程"
+        ]
+    },
+    {
+        "name": "StableDiffusion",
+        "type": "教程",
+        "link": "https://tob-design.yuque.com/kxcufk/sd",
+        "rating": 9,
+        "slogan": "发现由 AI 生成的令人惊叹的绘画作品,追寻创意的无边界",
+        "keywords": [
+            "AI绘画",
+            "教程"
+        ]
+    },
+    {
+        "name": "Tailwindcss",
+        "type": "CSS",
+        "link": "https://www.tailwindcss.cn/",
+        "rating": 7.8,
+        "slogan": "只需书写HTML代码,无需书写CSS,即可快速构建美观的网站",
+        "keywords": [
+            "CSS",
+            "框架"
+        ]
+    },
+    {
+        "name": "Getpapercss",
+        "type": "CSS",
+        "link": "https://www.getpapercss.com/",
+        "rating": 7.2,
+        "slogan": "手绘风格css框架,打造手绘风格",
+        "keywords": [
+            "CSS",
+            "框架",
+            "手绘风"
+        ]
+    },
+    {
+        "name": "Chartscss",
+        "type": "图表",
+        "link": "https://chartscss.org/",
+        "rating": 6.5,
+        "slogan": "使用 CSS 实用工具类将 HTML 设计图表",
+        "keywords": [
+            "CSS",
+            "框架",
+            "图表",
+            "Chart"
+        ]
+    },
+    {
+        "name": "Hellogithub",
+        "type": "阅读",
+        "link": "https://hellogithub.com/",
+        "rating": 8.8,
+        "slogan": "发现和分享有趣、入门级开源项目的平台",
+        "keywords": [
+            "Github",
+            "阅读",
+            "项目",
+            "开源",
+            "发现创意"
+        ]
+    },
+    {
+        "name": "Producthunt",
+        "type": "阅读",
+        "link": "https://www.producthunt.com/",
+        "rating": 8.8,
+        "slogan": "一个线上社区和平台,旨在向用户展示新兴科技产品、应用程序和创意项目",
+        "keywords": [
+            "社区",
+            "阅读",
+            "发现创意",
+            "开源"
+        ]
+    },
+    {
+        "name": "Nginx配置",
+        "type": "nginx",
+        "link": "https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN",
+        "rating": 8.2,
+        "slogan": "nginx可视化配置",
+        "keywords": [
+            "nginx",
+            "配置",
+            "可视化"
+        ]
+    },
+    {
+        "name": "免费GPT",
+        "type": "AI",
+        "link": "https://c.binjie.fun",
+        "rating": 8.9,
+        "slogan": "第三方个人代理免登录使用GPT",
+        "keywords": [
+            "AI",
+            "GPT",
+            "免登录"
+        ]
+    },
+    {
+        "name": "文心一言",
+        "type": "AI",
+        "link": "https://yiyan.baidu.com/",
+        "rating": 8.1,
+        "slogan": "百度全新一代知识增强大语言模型,高效便捷地帮助人们获取信息、知识和灵感",
+        "keywords": [
+            "AI"
+        ]
+    },
+    {
+        "name": "通义千问",
+        "type": "AI",
+        "link": "https://qianwen.aliyun.com/",
+        "rating": 8.2,
+        "slogan": "阿里云推出的一个超大规模的语言模型,功能包括多轮对话、文案创作、逻辑推理、多模态理解、多语言支持",
+        "keywords": [
+            "AI"
+        ]
+    },
+    {
+        "name": "Claude",
+        "type": "AI",
+        "link": "https://claude.ai",
+        "rating": 9.5,
+        "slogan": "人工智能初创公司Anthropic发布的一款类似ChatGPT的产品,免费使用,可传文件",
+        "keywords": [
+            "AI"
+        ]
+    },
+    {
+        "name": "XlangAI",
+        "type": "AI",
+        "link": "https://chat.xlang.ai/zh",
+        "rating": 8.8,
+        "slogan": "LLM-powered 大模型",
+        "keywords": [
+            "AI"
+        ]
+    },
+    {
+        "name": "LLaVA大模型",
+        "type": "AI",
+        "link": "https://llava.hliu.cc/",
+        "rating": 9,
+        "slogan": "LLaVA大模型,目前免费可识别图片中的内容",
+        "keywords": [
+            "AI"
+        ]
+    },
+    {
+        "name": "Convertio",
+        "type": "文件转换",
+        "link": "https://convertio.co/zh/",
+        "rating": 9.5,
+        "slogan": "免费将您的文件转换成任意格式",
+        "keywords": [
+            "文件转换",
+            "PDF",
+            "音频转换",
+            "视频转换",
+            "文档转换"
+        ]
+    },
+    {
+        "name": "Pexels",
+        "type": "图片",
+        "link": "https://www.pexels.com/zh-cn/",
+        "rating": 8.5,
+        "slogan": "才华横溢的摄影作者在这里免费分享最精彩的素材图片和视频",
+        "keywords": [
+            "图片",
+            "素材"
+        ]
+    },
+    {
+        "name": "Canva",
+        "type": "设计",
+        "link": "https://www.canva.cn/",
+        "rating": 7.5,
+        "slogan": "免费在线设计平台,提供海量设计模板,易用性强",
+        "keywords": [
+            "设计",
+            "免费",
+            "模板"
+        ]
+    },
+    {
+        "name": "Unsplash",
+        "type": "图片",
+        "link": "https://unsplash.com/",
+        "rating": 9,
+        "slogan": "免费高清图片网站,海量美图任你选",
+        "keywords": [
+            "图片",
+            "素材",
+            "免费"
+        ]
+    },
+    {
+        "name": "草料二维码",
+        "type": "二维码",
+        "link": "https://cli.im/",
+        "rating": 8.5,
+        "slogan": "优雅的二维码生成器",
+        "keywords": [
+            "二维码",
+            "生成器"
+        ]
+    },
+    {
+        "name": "鸠摩搜索",
+        "type": "搜索引擎",
+        "link": "https://www.jiumodiary.com/",
+        "rating": 8,
+        "slogan": "无广告纯净文档搜索引擎",
+        "keywords": [
+            "文档搜索",
+            "无广告"
+        ]
+    },
+    {
+        "name": "uTools",
+        "type": "效率工具",
+        "link": "https://u.tools/",
+        "rating": 8.9,
+        "slogan": "极简主义效率工具,融合浏览器、 snatched、剪贴板管理等功能",
+        "keywords": [
+            "效率",
+            "工具"
+        ]
+    },
+    {
+        "name": "REMOVEBG",
+        "type": "图片处理",
+        "link": "https://www.remove.bg/",
+        "rating": 9,
+        "slogan": "强大的在线抠图工具,一键移除图片背景",
+        "keywords": [
+            "图片处理",
+            "抠图"
+        ]
+    },
+    {
+        "name": "Squoosh",
+        "type": "图片压缩",
+        "link": "https://squoosh.app/",
+        "rating": 9,
+        "slogan": "Google出品在线图片压缩工具,效果惊人",
+        "keywords": [
+            "图片压缩",
+            "免费"
+        ]
+    },
+    {
+        "name": "Animoto",
+        "type": "视频制作",
+        "link": "https://animoto.com/",
+        "rating": 8.5,
+        "slogan": "简单的在线视频制作和编辑网站",
+        "keywords": [
+            "视频制作",
+            "编辑"
+        ]
+    },
+    {
+        "name": "JSFiddle",
+        "type": "代码演示",
+        "link": "https://jsfiddle.net/",
+        "rating": 9,
+        "slogan": "在线代码演示和调试平台",
+        "keywords": [
+            "代码",
+            "演示"
+        ]
+    },
+    {
+        "name": "Pixlr",
+        "type": "图片编辑",
+        "link": "https://pixlr.com/",
+        "rating": 8.5,
+        "slogan": "强大在线图片编辑工具",
+        "keywords": [
+            "图片编辑",
+            "免费"
+        ]
+    },
+    {
+        "name": "cryptoicons",
+        "type": "图标",
+        "link": "https://cryptoicons.co/",
+        "rating": 8,
+        "slogan": "一个免费的加密货币和区块链相关图标资源站",
+        "keywords": [
+            "图标",
+            "区块链"
+        ]
+    },
+    {
+        "name": "SlidesGo",
+        "type": "演示文稿",
+        "link": "https://slidesgo.com/",
+        "rating": 8.5,
+        "slogan": "提供大量免费演示文稿模板",
+        "keywords": [
+            "演示文稿",
+            "免费模板"
+        ]
+    },
+    {
+        "name": "PDFexpert",
+        "type": "PDF",
+        "link": "https://pdfexpert.com/",
+        "rating": 9,
+        "slogan": "强大好用的PDF编辑工具",
+        "keywords": [
+            "PDF",
+            "编辑"
+        ]
+    },
+    {
+        "name": "ILoveIMG",
+        "type": "图片处理",
+        "link": "https://www.iloveimg.com/zh-cn",
+        "rating": 8.5,
+        "slogan": "常用图片编辑工具集合网站",
+        "keywords": [
+            "图片处理",
+            "编辑"
+        ]
+    },
+    {
+        "name": "VoiceBase",
+        "type": "语音转文字",
+        "link": "https://www.voicebase.com/",
+        "rating": 8.5,
+        "slogan": "强大的语音转文字服务",
+        "keywords": [
+            "语音转文字",
+            "语音识别"
+        ]
+    },
+    {
+        "name": "draw.io",
+        "type": "流程图",
+        "link": "https://app.diagrams.net/",
+        "rating": 9,
+        "slogan": "简单好用的在线流程图绘制工具",
+        "keywords": [
+            "流程图",
+            "绘制"
+        ]
+    },
+    {
+        "name": "TinyPNG",
+        "type": "图片压缩",
+        "link": "https://tinypng.com/",
+        "rating": 9,
+        "slogan": "免费无损图片压缩工具",
+        "keywords": [
+            "图片压缩",
+            "免费"
+        ]
+    },
+    {
+        "name": "Ultimate CSS Gradient Generator",
+        "type": "渐变色生成",
+        "link": "https://www.colorzilla.com/gradient-editor/",
+        "rating": 8.5,
+        "slogan": "强大的CSS渐变色生成器",
+        "keywords": [
+            "渐变色",
+            "CSS"
+        ]
+    },
+    {
+        "name": "WhatFont",
+        "type": "字体识别",
+        "link": "https://www.whatfontis.com/",
+        "rating": 8.5,
+        "slogan": "上传图片即可识别字体",
+        "keywords": [
+            "字体识别",
+            "WhatFont"
+        ]
+    },
+    {
+        "name": "QR Code Generator",
+        "type": "二维码生成",
+        "link": "https://www.the-qrcode-generator.com/",
+        "rating": 8,
+        "slogan": "强大的自定义二维码生成器",
+        "keywords": [
+            "二维码",
+            "生成器"
+        ]
+    },
+    {
+        "name": "CSS Scan",
+        "type": "CSS解析",
+        "link": "https://getcssscan.com/",
+        "rating": 8.5,
+        "slogan": "快速提取网站CSS信息",
+        "keywords": [
+            "CSS",
+            "解析"
+        ]
+    },
+    {
+        "name": "SmallDev.tools",
+        "type": "开发工具",
+        "link": "https://smalldev.tools/",
+        "rating": 9,
+        "slogan": "提供强大的在线开发者工具",
+        "keywords": [
+            "开发工具",
+            "在线"
+        ]
+    },
+    {
+        "name": "Coolors",
+        "type": "配色方案",
+        "link": "https://coolors.co/",
+        "rating": 9,
+        "slogan": "智能配色方案生成",
+        "keywords": [
+            "配色方案",
+            "Coolors"
+        ]
+    },
+    {
+        "name": "Reshot",
+        "type": "免费图片",
+        "link": "https://www.reshot.com/",
+        "rating": 8.5,
+        "slogan": "提供免版税高清图片",
+        "keywords": [
+            "免费图片",
+            "Reshot"
+        ]
+    },
+    {
+        "name": "Tuple",
+        "type": "App",
+        "link": "https://tuple.app/",
+        "rating": 8.5,
+        "slogan": "远程团队的设计协作平台",
+        "keywords": [
+            "设计协作",
+            "Tuple"
+        ]
+    },
+    {
+        "name": "Twitterxz",
+        "type": "Twitter",
+        "link": "https://twitterxz.com/",
+        "rating": 8.2,
+        "slogan": "在这里可以方便的下载Twitter中的视频和GIF",
+        "keywords": [
+            "视频",
+            "Twitter"
+        ]
+    }
+]

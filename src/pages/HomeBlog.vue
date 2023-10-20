@@ -58,6 +58,7 @@
                     </li>
                     <li class="nav__label nav__label--clear" @click="clearAllFilters">Clear all</li>
                 </menu>
+                <p>网站数量：{{ dataList.length + 1 }}</p>
             </nav>
             <transition-group name="dropdown" tag="section" class="dropdown" :style="dropdown">
                 <menu
@@ -98,7 +99,7 @@
             </transition-group>
 
             <transition-group name="company" tag="ul" class="content__list">
-                <li class="company" v-for="company in list" :key="company.id">
+                <li class="company" v-for="(company, index) in list" :key="index">
                     <div class="company__info">
                         <h2 class="company__name">
                             <a :href="company.link" target="_blank">
@@ -128,6 +129,7 @@
 </template>
 
 <script>
+import dataList from '@static/data.json'
 import LoadingBox from '@/components/LoadingBox.vue'
 export default {
     components: { LoadingBox },
@@ -146,333 +148,7 @@ export default {
                 categories: '标签',
                 rating: '推荐度'
             },
-            dataList: [
-                {
-                    id: '0',
-                    name: 'Codepen',
-                    type: '代码',
-                    link: 'https://codepen.io',
-                    rating: 9.9,
-                    slogan: '在线代码编辑器和前端开发社区，发掘特效创意',
-                    keywords: ['社区', '阅读', '发现创意', '开源', '代码', '特效']
-                },
-                {
-                    id: '1',
-                    name: 'Vercel',
-                    type: '部署平台',
-                    link: 'https://vercel.com/',
-                    rating: 9,
-                    slogan: '用于托管、构建和部署静态网站和单页面应用程序',
-                    keywords: ['部署平台', '代码托管', '静态网站托管', '博客']
-                },
-                {
-                    id: '2',
-                    name: 'Netlify',
-                    type: '部署平台',
-                    link: 'https://app.netlify.com/',
-                    rating: 8,
-                    slogan: '一款基于云服务的静态网站托管和自动化部署平台',
-                    keywords: ['部署平台', '自动化部署', '静态网站托管', '云服务', '博客']
-                },
-                {
-                    id: '3',
-                    name: 'Render',
-                    type: '部署平台',
-                    link: 'https://dashboard.render.com/',
-                    rating: 7,
-                    slogan: '一个轻量级云服务器平台',
-                    keywords: ['部署平台', '自动化部署', '静态网站托管', '云服务', '博客']
-                },
-                {
-                    id: '4',
-                    name: 'Gamma',
-                    type: '演示',
-                    link: 'https://gamma.app/',
-                    rating: 9.5,
-                    slogan: '一个能颠覆现有PPT制作的网站',
-                    keywords: ['在线演示', 'PPT', 'AI文档', '分享', '多人协作']
-                },
-                {
-                    id: '5',
-                    name: 'Onemodel',
-                    type: '流程图',
-                    link: 'https://www.onemodel.app/',
-                    rating: 7,
-                    slogan: '软件架构师专用绘图工具',
-                    keywords: ['流程图', '绘图']
-                },
-                {
-                    id: '6',
-                    name: 'Tldraw',
-                    type: '画板',
-                    link: 'https://www.tldraw.com/',
-                    rating: 6,
-                    slogan: '开源在线画板',
-                    keywords: ['画板', '流程图', '多人协作']
-                },
-                {
-                    id: '7',
-                    name: 'Paragraph',
-                    type: '写作',
-                    link: 'https://paragraph.xyz/notes',
-                    rating: 7.5,
-                    slogan: '提供在线写作和协作功能的网站',
-                    keywords: ['在线写作', '博客', '多人协作']
-                },
-                {
-                    id: '8',
-                    name: 'Iconbuddy',
-                    type: '图标',
-                    link: 'https://iconbuddy.app/',
-                    rating: 8,
-                    slogan: '免费icon素材图标库，可修改颜色',
-                    keywords: ['图标', 'SVG', '免费下载', '免登录']
-                },
-                {
-                    id: '9',
-                    name: 'Heroicons',
-                    type: 'SVG图标',
-                    link: 'https://heroicons.com/',
-                    rating: 8,
-                    slogan: '一个手绘版SVG图标的网站',
-                    keywords: ['图标', 'SVG', '免费下载', '免登录']
-                },
-                {
-                    id: '91',
-                    name: 'Iconfont',
-                    type: '图标',
-                    link: 'https://www.iconfont.cn/',
-                    rating: 8.9,
-                    slogan: '阿里巴巴矢量图标库',
-                    keywords: ['图标', 'SVG', '免费下载']
-                },
-                {
-                    id: '10',
-                    name: 'Recordscreen',
-                    type: '录屏',
-                    link: 'https://recordscreen.io/',
-                    rating: 8.5,
-                    slogan: '免登录在线录屏网站',
-                    keywords: ['在线录屏', '视频', '免登录']
-                },
-                {
-                    id: '11',
-                    name: 'Loom',
-                    type: '录屏',
-                    link: 'https://www.loom.com/',
-                    rating: 9,
-                    slogan: '在线网页录屏与视频通话协作工具',
-                    keywords: ['在线录屏', '视频', '视频编辑']
-                },
-                {
-                    id: '12',
-                    name: 'Logseq',
-                    type: '知识库',
-                    link: 'https://logseq.com/',
-                    rating: 8.7,
-                    slogan: '开源知识库管理系统',
-                    keywords: ['开源', '知识库', '博客']
-                },
-                {
-                    id: '13',
-                    name: 'Aicolors',
-                    type: '颜色',
-                    link: 'https://aicolors.co/',
-                    rating: 8.4,
-                    slogan: '获取网站配置方案实例，一句话找到完美的网站配色方案',
-                    keywords: ['颜色', 'AI', '配色']
-                },
-                {
-                    id: '14',
-                    name: 'Gradientlab',
-                    type: '渐变色',
-                    link: 'https://gradientlab.space/',
-                    rating: 7.8,
-                    slogan: '一拖即得渐变色CSS，轻松实现炫酷效果',
-                    keywords: ['颜色', '配色', '渐变色']
-                },
-                {
-                    id: '15',
-                    name: 'AI工具集',
-                    type: 'AI导航站',
-                    link: 'https://ai-bot.cn/',
-                    rating: 7,
-                    slogan: '探索AI导航站发现数百个AI工具，帮助您自动化高效完成任务',
-                    keywords: ['AI', '导航站']
-                },
-                {
-                    id: '16',
-                    name: 'Aihub',
-                    type: 'AI导航站',
-                    link: 'https://www.aihub.cn/',
-                    rating: 7,
-                    slogan: '发现优质AI站点、内含资源工具、资讯等集合',
-                    keywords: ['AI', '导航站']
-                },
-                {
-                    id: '17',
-                    name: 'Framer',
-                    type: 'AI',
-                    link: 'https://framer.com/',
-                    rating: 8.9,
-                    slogan: '提供了一个直观的界面，使用户能够通过拖放元素、添加动画效果和手势交互来构建原型',
-                    keywords: ['AI', '原型', '生成代码', '自定义页面']
-                },
-                {
-                    id: '18',
-                    name: 'Ailandingpage',
-                    type: 'AI',
-                    link: 'https://www.ailandingpagegenerator.com/',
-                    rating: 8,
-                    slogan: '一种利用人工智能（AI）技术的营销页面，旨在提高用户转化率和优化营销效果',
-                    keywords: ['AI', '生成代码', '自定义页面']
-                },
-                {
-                    id: '19',
-                    name: 'Noya.io',
-                    type: 'AI',
-                    link: 'https://www.noya.io/app/',
-                    rating: 8.4,
-                    slogan: '​NoyaIo通过在线自定义拖拽生成页面，并导出代码、图片、Figma等',
-                    keywords: ['AI', '生成代码', '自定义页面']
-                },
-                {
-                    id: '20',
-                    name: 'v0.dev',
-                    type: 'AI',
-                    link: 'https://v0.dev/',
-                    rating: 9.2,
-                    slogan: 'Vercel平台正在内测的AI生成页面平台，最终可达到一句话生成并部署到​Vercel平台',
-                    keywords: ['AI', '生成代码']
-                },
-                {
-                    id: '21',
-                    name: 'Midjourney',
-                    type: '教程',
-                    link: 'https://tob-design.yuque.com/kxcufk/mj/',
-                    rating: 9,
-                    slogan: '探索由 AI 创造的绘画作品，带你进入无限的艺术世界',
-                    keywords: ['AI绘画', '教程']
-                },
-                {
-                    id: '22',
-                    name: 'StableDiffusion',
-                    type: '教程',
-                    link: 'https://tob-design.yuque.com/kxcufk/sd',
-                    rating: 9,
-                    slogan: '发现由 AI 生成的令人惊叹的绘画作品，追寻创意的无边界',
-                    keywords: ['AI绘画', '教程']
-                },
-                {
-                    id: '23',
-                    name: 'Tailwindcss',
-                    type: 'CSS',
-                    link: 'https://www.tailwindcss.cn/',
-                    rating: 7.8,
-                    slogan: '只需书写HTML代码，无需书写CSS，即可快速构建美观的网站',
-                    keywords: ['CSS', '框架']
-                },
-                {
-                    id: '24',
-                    name: 'Getpapercss',
-                    type: 'CSS',
-                    link: 'https://www.getpapercss.com/',
-                    rating: 7.2,
-                    slogan: '手绘风格css框架，打造手绘风格',
-                    keywords: ['CSS', '框架', '手绘风']
-                },
-                {
-                    id: '25',
-                    name: 'Chartscss',
-                    type: '图表',
-                    link: 'https://chartscss.org/',
-                    rating: 6.5,
-                    slogan: '使用 CSS 实用工具类将 HTML 设计图表',
-                    keywords: ['CSS', '框架', '图表', 'Chart']
-                },
-                {
-                    id: '26',
-                    name: 'Hellogithub',
-                    type: '阅读',
-                    link: 'https://hellogithub.com/',
-                    rating: 8.8,
-                    slogan: '发现和分享有趣、入门级开源项目的平台',
-                    keywords: ['Github', '阅读', '项目', '开源', '发现创意']
-                },
-                {
-                    id: '27',
-                    name: 'Producthunt',
-                    type: '阅读',
-                    link: 'https://www.producthunt.com/',
-                    rating: 8.8,
-                    slogan: '一个线上社区和平台，旨在向用户展示新兴科技产品、应用程序和创意项目',
-                    keywords: ['社区', '阅读', '发现创意', '开源']
-                },
-                {
-                    id: '28',
-                    name: 'Nginx配置',
-                    type: 'nginx',
-                    link: 'https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN',
-                    rating: 8.2,
-                    slogan: 'nginx可视化配置',
-                    keywords: ['nginx', '配置', '可视化']
-                },
-
-                {
-                    id: '29',
-                    name: '免费GPT',
-                    type: 'AI',
-                    link: 'https://c.binjie.fun',
-                    rating: 8.9,
-                    slogan: '第三方个人代理免登录使用GPT',
-                    keywords: ['AI', 'GPT', '免登录']
-                },
-                {
-                    id: '30',
-                    name: '文心一言',
-                    type: 'AI',
-                    link: 'https://yiyan.baidu.com/',
-                    rating: 8.1,
-                    slogan: '百度全新一代知识增强大语言模型，高效便捷地帮助人们获取信息、知识和灵感',
-                    keywords: ['AI']
-                },
-                {
-                    id: '31',
-                    name: '通义千问',
-                    type: 'AI',
-                    link: 'https://qianwen.aliyun.com/',
-                    rating: 8.2,
-                    slogan: '阿里云推出的一个超大规模的语言模型，功能包括多轮对话、文案创作、逻辑推理、多模态理解、多语言支持',
-                    keywords: ['AI']
-                },
-                {
-                    id: '32',
-                    name: 'Claude',
-                    type: 'AI',
-                    link: 'https://claude.ai',
-                    rating: 9.5,
-                    slogan: '人工智能初创公司Anthropic发布的一款类似ChatGPT的产品，免费使用，可传文件',
-                    keywords: ['AI']
-                },
-                {
-                    id: '33',
-                    name: 'XlangAI',
-                    type: 'AI',
-                    link: 'https://chat.xlang.ai/zh',
-                    rating: 8.8,
-                    slogan: 'LLM-powered 大模型',
-                    keywords: ['AI']
-                },
-                {
-                    id: '34',
-                    name: 'LLaVA大模型',
-                    type: 'AI',
-                    link: 'https://llava.hliu.cc/',
-                    rating: 9,
-                    slogan: 'LLaVA大模型，目前免费可识别图片中的内容',
-                    keywords: ['AI']
-                }
-            ]
+            dataList
         }
     },
 
@@ -561,7 +237,6 @@ export default {
                 this.$set(this.filters.categories, category, false)
             })
         })
-
         this.$nextTick(() => {
             this.loading = false
         })
