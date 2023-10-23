@@ -333,7 +333,7 @@ $grey: #e7e7e7;
 
     &__info {
         cursor: pointer;
-        padding: 0 0.75rem;
+        padding: 0 1.2rem;
         text-align: center;
     }
 
@@ -348,10 +348,11 @@ $grey: #e7e7e7;
         margin: 0.75rem 0;
         font-size: 1.3rem;
         font-weight: 200;
-        text-align: center;
+        text-align: left;
         a {
             color: rgba(0, 0, 0, 0.8);
             letter-spacing: 0px;
+            margin: 0;
         }
         a:hover {
             color: rgba(0, 0, 0, 1);
@@ -372,7 +373,7 @@ $grey: #e7e7e7;
         display: flex;
         justify-content: space-between;
         margin-top: 1.5rem;
-        padding: 0.5rem 0.75rem;
+        padding: 0.5rem 1.2rem;
         background-color: rgba($grey, 0.1);
         border-top: 1px solid $grey;
     }
@@ -382,6 +383,11 @@ $grey: #e7e7e7;
     &__type:hover {
         text-decoration: underline;
         cursor: pointer;
+    }
+}
+.company:hover {
+    .underlined--offset {
+        background-size: 100% 100%;
     }
 }
 .iconSvg {
@@ -513,13 +519,13 @@ $grey: #e7e7e7;
         transition: all 275ms;
 
         &:hover {
-            border-color: #379a93;
+            background-color: #161616;
+            color: #ffffff;
         }
 
         &--active {
-            color: white;
-            border-color: #379a93;
-            background-color: #379a93;
+            color: #ffffff;
+            background-color: #161616;
         }
     }
 
@@ -547,7 +553,7 @@ $grey: #e7e7e7;
         &::-webkit-slider-runnable-track {
             width: 100%;
             height: 4px;
-            background-image: linear-gradient(to right, white, #46d2c4);
+            background-image: linear-gradient(to right, white, #161616);
         }
     }
 }
