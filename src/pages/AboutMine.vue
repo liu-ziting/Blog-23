@@ -43,24 +43,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.underlined {
-    text-decoration: none;
-    background-image: linear-gradient(to right, #ffff00 0, #ffff00 100%);
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    transition: background 0.5s;
-    &:hover {
-        background-size: 100% 100%;
-    }
-    &--offset {
-        background-position: 0 0.2em;
-        box-shadow: inset 0 -0.7em 0 0 #ffffff;
-    }
-}
 .faq-header {
     font-size: 42px;
     border-bottom: 1px dotted #ccc;
-    padding: 24px;
+    padding: 0 0 24px 0;
 }
 
 .faq-content {
@@ -71,7 +57,6 @@ export default {
     }
 
     .panel-title {
-        font-size: 22px;
         width: 100%;
         position: relative;
         margin: 0;
@@ -102,7 +87,7 @@ export default {
     .plus {
         position: absolute;
         margin-left: 20px;
-        margin-top: -3px;
+        margin-top: 0px;
         z-index: 5;
         font-size: 42px;
         line-height: 100%;
@@ -124,6 +109,24 @@ export default {
     }
     .panel {
         display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .wrap {
+        padding: 10%;
+        font-size: 14px;
+    }
+    .faq-content .plus {
+        margin-left: 0;
+    }
+    .faq-content .panel-title {
+        padding: 10px 10px 0 30px;
+    }
+    .faq-content .panel-content {
+        margin: 0;
+        padding: 0 !important;
+        margin-left: 30px;
+        margin-top: 20px;
     }
 }
 </style>

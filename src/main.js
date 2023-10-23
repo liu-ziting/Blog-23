@@ -4,6 +4,7 @@ import router from './router/index';
 
 import '../styles/main.css'
 import '../styles/fonts.css'
+import '../styles/hover.scss'
 Vue.config.productionTip = false
 
 new Vue({

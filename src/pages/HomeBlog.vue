@@ -58,7 +58,6 @@
                     </li>
                     <li class="nav__label nav__label--clear" @click="clearAllFilters">Clear all</li>
                 </menu>
-                <!-- <p>网站数量：{{ dataList.length + 1 }}</p> -->
             </nav>
             <transition-group name="dropdown" tag="section" class="dropdown" :style="dropdown">
                 <menu
@@ -102,7 +101,7 @@
                 <li class="company" v-for="(company, index) in list" :key="index">
                     <div class="company__info" @click="openLink(company.link)">
                         <h2 class="company__name">
-                            <a :href="company.link" target="_blank">
+                            <a class="underlined underlined--offset" :href="company.link" target="_blank">
                                 {{ company.name }}
                             </a>
                         </h2>
@@ -133,7 +132,6 @@ import dataList from '@static/data.json'
 import LoadingBox from '@/components/LoadingBox.vue'
 export default {
     components: { LoadingBox },
-
     data() {
         return {
             loading: true,
@@ -224,6 +222,10 @@ export default {
     },
 
     beforeMount() {
+        // var currentPage = 1
+        // var pageSize = 10
+        // var start = (currentPage - 1) * pageSize
+        // var end = start + pageSize
         this.companies = this.dataList
         this.companies.forEach(({ type, keywords, rating }) => {
             this.$set(this.filters.countries, type, false)
@@ -245,6 +247,7 @@ export default {
 
 
 <style lang="scss" scoped>
+$grey: #e7e7e7;
 .content {
     position: relative;
     font-family: 'Nunito', sans-serif;
@@ -278,12 +281,12 @@ export default {
     padding-top: 0.75rem;
     border-radius: 6px;
     background-color: white;
-    box-shadow: 0 0 0 1px #c5d0d1;
+    box-shadow: 0 0 0 1px $grey;
     backface-visibility: hidden;
     transform-origin: 10% 50%;
     z-index: 1;
+    box-sizing: border-box;
     a {
-        font-family: 'Oswald', sans-serif;
         font-weight: bold;
         text-decoration: none;
         color: #16151b;
@@ -348,6 +351,7 @@ export default {
         text-align: center;
         a {
             color: rgba(0, 0, 0, 0.8);
+            letter-spacing: 0px;
         }
         a:hover {
             color: rgba(0, 0, 0, 1);
@@ -361,6 +365,7 @@ export default {
         text-transform: capitalize;
         font-size: 0.9rem;
         line-height: 20px;
+        opacity: 0.6;
     }
 
     &__details {
@@ -368,8 +373,8 @@ export default {
         justify-content: space-between;
         margin-top: 1.5rem;
         padding: 0.5rem 0.75rem;
-        background-color: rgba(#c5d0d1, 0.1);
-        border-top: 1px solid #c5d0d1;
+        background-color: rgba($grey, 0.1);
+        border-top: 1px solid $grey;
     }
     &__type {
         font-size: 0.8rem;
@@ -379,7 +384,6 @@ export default {
         cursor: pointer;
     }
 }
-
 .iconSvg {
     float: left;
     margin-right: 3px;
@@ -392,7 +396,7 @@ export default {
     white-space: nowrap;
     margin: 0 1rem;
     padding: 2rem 0.5rem 1rem;
-    border-bottom: 1px solid #c5d0d1;
+    border-bottom: 1px solid $grey;
 
     &__controls {
         display: flex;
@@ -501,7 +505,7 @@ export default {
         margin-top: 0.5rem;
         margin-right: 0.5rem;
         padding: 0.25rem 0.5rem;
-        border: 1px solid #c5d0d1;
+        border: 1px solid $grey;
         border-radius: 6px;
         font-size: 0.8rem;
         line-height: 1.35;
