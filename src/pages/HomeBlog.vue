@@ -191,6 +191,7 @@ export default {
 
     methods: {
         setFilter(filter, option) {
+            console.log(option)
             if (filter === 'countries') {
                 this.filters[filter][option] = !this.filters[filter][option]
             } else {
@@ -279,7 +280,7 @@ $grey: #e7e7e7;
     margin-left: 1rem;
     margin-top: 1rem;
     padding-top: 0.75rem;
-    border-radius: 6px;
+    border-radius: 5px;
     background-color: white;
     box-shadow: 0 0 0 1px $grey;
     backface-visibility: hidden;

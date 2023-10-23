@@ -730,5 +730,17 @@
             "AI代码生成",
             "编辑器插件"
         ]
+    },
+    {
+        "name": "Uiverse",
+        "type": "AI代码生成",
+        "link": "https://uiverse.io",
+        "rating": 8.5,
+        "slogan": "一个免费的组件库网站,由CSS和HTML制作的UI元素组成",
+        "keywords": [
+            "CSS",
+            "组件库",
+            "免费"
+        ]
     }
 ]
