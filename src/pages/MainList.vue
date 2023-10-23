@@ -106,7 +106,7 @@ $yellow05: rgba(255, 255, 0, 0.5);
     .underlined {
         color: $black;
         flex: 1;
-        font-size: 1.8em;
+        font-size: 1.6em;
         line-height: 1.2;
         text-decoration: none;
         background-image: linear-gradient(to right, $yellow 0, $yellow 100%);
