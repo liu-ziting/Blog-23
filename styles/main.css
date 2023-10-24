@@ -111,6 +111,7 @@ ul {
     list-style: none
 }
 
+
 blockquote,
 q {
     quotes: none
@@ -176,4 +177,13 @@ body {
     .wrap {
         padding: 0;
     }
+}
+
+footer {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    color: #161616;
+    margin-bottom: 10px;
+    font-family: "ALIBABA";
 }

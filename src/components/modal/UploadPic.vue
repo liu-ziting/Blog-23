@@ -83,6 +83,7 @@
                 </div>
             </div>
         </div>
+        <modal-box />
     </div>
 </template>
 
@@ -91,9 +92,10 @@
 import * as qiniu from 'qiniu-js'
 import Clipboard from 'clipboard'
 import { genUpToken } from '@/utils/qiniuToken'
-
+import ModalBox from '@/components/modal/ModalBox.vue'
 const clipboard = new Clipboard('.copy-btn')
 export default {
+    components: { ModalBox },
     data() {
         return {
             show: true,
@@ -269,6 +271,7 @@ $clr-light-blue: rgb(171, 202, 255);
     font-size: 0.9375rem;
     color: $clr-light-gray;
     margin-top: 0;
+    font-family: 'ALIBABA';
 }
 
 .upload-area__tooltip {
@@ -338,6 +341,7 @@ $clr-light-blue: rgb(171, 202, 255);
     margin: 0;
     margin-top: 0.625rem;
     transition: opacity 300ms ease-in-out;
+    font-family: 'ALIBABA';
 }
 
 .drop-zoon:hover .drop-zoon__icon,
