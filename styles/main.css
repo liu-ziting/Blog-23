@@ -184,6 +184,8 @@ footer {
     width: 100%;
     text-align: center;
     color: #161616;
-    margin-bottom: 10px;
     font-family: "ALIBABA";
+    position: fixed;
+    bottom: 10px;
+    background-color: #fff;
 }
