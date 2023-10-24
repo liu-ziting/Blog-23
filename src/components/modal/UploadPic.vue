@@ -226,7 +226,7 @@ $clr-light-blue: rgb(171, 202, 255);
 .upload-area {
     width: 24rem;
     background-color: $clr-white;
-    box-shadow: 0 10px 60px rgb(218, 229, 255);
+    // box-shadow: 0 10px 60px rgb(218,229, 255);
     // border: 2px solid $clr-light-blue;
     border-radius: 24px;
     padding: 2rem 1.875rem 3rem 1.875rem;
@@ -235,11 +235,16 @@ $clr-light-blue: rgb(171, 202, 255);
     margin: 0 auto;
     position: fixed;
     left: 50%;
-    top: 20%;
+    top: 15%;
     margin-left: -12rem;
     box-sizing: border-box;
+    box-shadow: 0.8rem 0.8rem 1.4rem #c8d0e7, -0.2rem -0.2rem 1.8rem #ffffff;
+    transition: all 0.2s;
 }
-
+.upload-area:hover {
+    box-shadow: 0rem 0rem 1.8rem #e0e5f4;
+    transition: all 0.2s;
+}
 .upload-area--open {
     /* Slid Down Animation */
     animation: slidDown 500ms ease-in-out;

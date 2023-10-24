@@ -1,17 +1,13 @@
 <template>
     <div id="app">
         <nav>
-            <router-link to="/" :class="{ active: $route.path === '/' }">
-                <a href="javascript:;">Home</a>
-            </router-link>
-            <router-link to="/Article" :class="{ active: $route.path === '/Article' }">
-                <a href="javascript:;">Article</a>
-            </router-link>
-            <router-link to="/About" :class="{ active: $route.path === '/About' }">
-                <a href="javascript:;">About</a>
-            </router-link>
-            <router-link to="/ToolList" :class="{ active: $route.path === '/ToolList' }">
-                <a href="javascript:;">Tool</a>
+            <router-link
+                v-for="(item, index) in navList"
+                :key="index"
+                :to="item.to"
+                :class="{ active: $route.path === item.to }"
+            >
+                <a href="javascript:;">{{ item.name }}</a>
             </router-link>
         </nav>
         <div class="main">
@@ -38,7 +34,13 @@ export default {
     components: {},
     data() {
         return {
-            backToTop: false
+            backToTop: false,
+            navList: [
+                { name: 'Home', to: '/' },
+                { name: 'Article', to: '/Article' },
+                { name: 'Tool', to: '/ToolList' },
+                { name: 'About', to: '/About' }
+            ]
         }
     },
     mounted() {
