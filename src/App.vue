@@ -10,6 +10,9 @@
             <router-link to="/About" :class="{ active: $route.path === '/About' }">
                 <a href="javascript:;">About</a>
             </router-link>
+            <router-link to="/ToolList" :class="{ active: $route.path === '/ToolList' }">
+                <a href="javascript:;">Tool</a>
+            </router-link>
         </nav>
         <div class="main">
             <router-view></router-view>

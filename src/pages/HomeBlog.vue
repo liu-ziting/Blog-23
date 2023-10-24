@@ -82,7 +82,6 @@
                             step="0.1"
                         />
                     </li>
-
                     <template v-else>
                         <li
                             v-for="(active, option) in options"

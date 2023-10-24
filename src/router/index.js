@@ -22,7 +22,11 @@ const router = new VueRouter({
         {
             path: '/PicCat',
             component: () => import('@/pages/PicCat.vue')
-        }
+        },
+        {
+            path: '/ToolList',
+            component: () => import('@/pages/ToolList.vue')
+        },
     ]
 });
 Vue.use(VueRouter);

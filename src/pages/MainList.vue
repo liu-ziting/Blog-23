@@ -99,14 +99,6 @@ export default {
         height: 60px;
         font-family: 'Source Code Pro', sans-serif;
     }
-    .topBorder {
-        margin: 0 0 50px;
-        width: 100px;
-        height: 10px;
-        background: #161616;
-        display: block;
-        cursor: pointer;
-    }
 }
 
 @keyframes typing {
