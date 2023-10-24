@@ -246,17 +246,16 @@ $clr-light-blue: rgb(171, 202, 255);
     transition: all 0.2s;
 }
 .upload-area--open {
-    /* Slid Down Animation */
     animation: slidDown 500ms ease-in-out;
 }
 
 @keyframes slidDown {
     from {
-        height: 28.125rem; /* 450px */
+        height: 28.125rem;
     }
 
     to {
-        height: 35rem; /* 560px */
+        height: 35rem;
     }
 }
 
@@ -308,7 +307,7 @@ $clr-light-blue: rgb(171, 202, 255);
 /* Drop Zoon */
 .upload-area__drop-zoon {
     position: relative;
-    height: 11.25rem; /* 180px */
+    height: 11.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -379,7 +378,6 @@ $clr-light-blue: rgb(171, 202, 255);
     display: none;
 }
 
-/* (drop-zoon--over) Modifier Class */
 .drop-zoon--over {
     border-color: $clr-blue;
 }
@@ -394,7 +392,6 @@ $clr-light-blue: rgb(171, 202, 255);
     display: none;
 }
 
-/* File Details Area */
 .upload-area__file-details {
     height: 0;
     visibility: hidden;
@@ -405,7 +402,6 @@ $clr-light-blue: rgb(171, 202, 255);
     transition-delay: 500ms;
 }
 
-/* (duploaded-file--open) Modifier Class */
 .file-details--open {
     height: auto;
     visibility: visible;
@@ -418,7 +414,6 @@ $clr-light-blue: rgb(171, 202, 255);
     margin-bottom: 20px;
 }
 
-/* Uploaded File */
 .uploaded-file {
     display: flex;
     align-items: center;
@@ -429,7 +424,6 @@ $clr-light-blue: rgb(171, 202, 255);
     transition-property: visibility, opacity;
 }
 
-/* (duploaded-file--open) Modifier Class */
 .uploaded-file--open {
     visibility: visible;
     opacity: 1;
@@ -483,7 +477,6 @@ $clr-light-blue: rgb(171, 202, 255);
     background-color: $clr-blue;
 }
 
-/* Progress Animation */
 .uploaded-file__info--active::after {
     animation: progressMove 800ms ease-in-out;
     animation-delay: 300ms;
@@ -516,7 +509,7 @@ $clr-light-blue: rgb(171, 202, 255);
 
 .uploaded-file__name {
     width: 100%;
-    max-width: 6.25rem; /* 100px */
+    max-width: 6.25rem;
     display: inline-block;
     font-size: 1rem;
     white-space: nowrap;
