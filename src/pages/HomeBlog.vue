@@ -465,7 +465,7 @@ $grey: #e7e7e7;
 .dropdown {
     position: relative;
     height: 0;
-    overflow: hidden;
+    overflow: scroll;
     transition: height 350ms;
 
     &::after {

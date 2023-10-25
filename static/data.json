@@ -775,5 +775,84 @@
             "远程控制",
             "免费"
         ]
+    },
+    {
+        "name": "Lottielab",
+        "type": "动画",
+        "link": "https://www.lottielab.com/",
+        "rating": 9.5,
+        "slogan": "轻松创建和导出Lottie动画的免费轻量工具！",
+        "keywords": [
+            "GIF",
+            "动画"
+        ]
+    },
+    {
+        "name": "Icons",
+        "type": "SVG图标",
+        "link": "https://icons.download/",
+        "rating": 8.5,
+        "slogan": "免费svg图标下载库！",
+        "keywords": [
+            "图标",
+            "SVG",
+            "免费下载",
+            "免登录"
+        ]
+    },
+    {
+        "name": "Brandbird",
+        "type": "SVG",
+        "link": "https://www.brandbird.app/tools/ui-skeleton-gallery?via=pascal",
+        "rating": 8.7,
+        "slogan": "一个免费的可定制的SVG骨架加载器用于设计线框图和样机UI元素的集合！",
+        "keywords": [
+            "骨架屏",
+            "SVG",
+            "免费下载"
+        ]
+    },
+    {
+        "name": "Superdesigner",
+        "type": "SVG",
+        "link": "https://superdesigner.co/tools/svg-backgrounds",
+        "rating": 8.3,
+        "slogan": "生成svg平铺图",
+        "keywords": [
+            "组合",
+            "图片"
+        ]
+    },
+    {
+        "name": "Patterninja",
+        "type": "图片",
+        "link": "https://patterninja.com/",
+        "rating": 7.9,
+        "slogan": "用于组合图像的图案制作应用程序！",
+        "keywords": [
+            "组合",
+            "图片"
+        ]
+    },
+    {
+        "name": "Function12",
+        "type": "代码",
+        "link": "https://function12.io/",
+        "rating": 8.8,
+        "slogan": "figma转html代码",
+        "keywords": [
+            "figma",
+            "生成代码"
+        ]
+    },
+    {
+        "name": "TooolsDesign",
+        "type": "网站",
+        "link": "https://www.toools.design/latest-resources",
+        "rating": 8.8,
+        "slogan": "发现有趣的网站和项目",
+        "keywords": [
+            "网站"
+        ]
     }
 ]

@@ -216,10 +216,10 @@ export default {
                 this.$refs.uploadedFileIconText.innerHTML = isImage[0]
             }
             if (isImage.length !== 0) {
-                if (this.file.size <= 50000000) {
+                if (this.file.size <= 100000000) {
                     return true
                 } else {
-                    alert('图片大小不能超过10MB')
+                    alert('图片大小不能超过100MB')
                     return false
                 }
             } else {
