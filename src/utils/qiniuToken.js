@@ -2,18 +2,10 @@ import CryptoJS from 'crypto-js';
 
 export function genUpToken(accessKey, secretKey, bucket) {
     const putPolicy = genPolicy(bucket);
-
-    //SETP 2
     var put_policy = JSON.stringify(putPolicy);
-
-    //SETP 3
     var encoded = base64encode(utf16to8(put_policy));
-
-    //SETP 4
     var hash = CryptoJS.HmacSHA1(encoded, secretKey);
     var encoded_signed = hash.toString(CryptoJS.enc.Base64);
-
-    //SETP 5
     var upload_token = accessKey + ":" + safe64(encoded_signed) + ":" + encoded;
     return upload_token;
 }

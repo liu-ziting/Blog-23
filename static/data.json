@@ -180,7 +180,7 @@
     },
     {
         "name": "Aicolors",
-        "type": "颜色",
+        "type": "配色",
         "link": "https://aicolors.co/",
         "rating": 8.4,
         "slogan": "获取网站配置方案实例,一句话找到完美的网站配色方案",
@@ -741,6 +741,28 @@
             "CSS",
             "组件库",
             "免费"
+        ]
+    },
+    {
+        "name": "Coolors",
+        "type": "配色",
+        "link": "https://coolors.co/",
+        "rating": 8,
+        "slogan": "一个在线颜色搭配工具",
+        "keywords": [
+            "颜色",
+            "配色"
+        ]
+    },
+    {
+        "name": "Colorhunt",
+        "type": "配色",
+        "link": "https://colorhunt.co/",
+        "rating": 8.5,
+        "slogan": "不仅会实时更新不同配色方案,用户还能在该网站分享自己的色彩搭配",
+        "keywords": [
+            "颜色",
+            "配色"
         ]
     }
 ]

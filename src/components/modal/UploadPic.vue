@@ -1,6 +1,17 @@
 <template>
     <div v-if="show" id="uploadArea" class="upload-area" :class="{ 'upload-area--open': uploadAreaOpen }">
-        <!-- <span class="close"> x </span> -->
+        <span @click="close" class="close">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+            >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </span>
         <div class="upload-area__header">
             <h1 class="upload-area__title">图传工具</h1>
             <p class="upload-area__paragraph">
@@ -98,7 +109,7 @@ export default {
     components: { ModalBox },
     data() {
         return {
-            show: true,
+            show: false,
             link: '',
             imagesTypes: ['jpeg', 'png', 'svg', 'gif'],
             uploadAreaOpen: false,
@@ -114,19 +125,26 @@ export default {
             bucket: 'liuziting'
         }
     },
-    mounted() {
-        clipboard.on('success', e => {
-            console.log('Link copied!')
-            e.clearSelection()
-        })
-        clipboard.on('error', e => {
-            console.error('Copy failed:', e.action)
-        })
-
-        this.$refs.toolTipData.innerHTML = this.imagesTypes.join(', .')
-        this.uploadToken = genUpToken(this.accessKey, this.secretKey, this.bucket)
-    },
+    mounted() {},
     methods: {
+        initData() {
+            this.show = true
+            this.$nextTick(() => {
+                clipboard.on('success', e => {
+                    console.log('Link copied!')
+                    e.clearSelection()
+                })
+                clipboard.on('error', e => {
+                    console.error('Copy failed:', e.action)
+                })
+
+                this.uploadToken = genUpToken(this.accessKey, this.secretKey, this.bucket)
+                this.$refs.toolTipData.innerHTML = this.imagesTypes.join(', .')
+            })
+        },
+        close() {
+            this.show = false
+        },
         dragOver(event) {
             event.preventDefault()
             this.$refs.dropZoon.classList.add('drop-zoon--over')
@@ -154,16 +172,6 @@ export default {
                 this.$refs.uploadedFileInfo.classList.remove('uploaded-file__info--active')
                 this.fileReader.addEventListener('load', () => {
                     this.upload()
-                    setTimeout(() => {
-                        this.uploadAreaOpen = true
-                        this.$refs.loadingText.style.display = 'none'
-                        this.$refs.previewImage.style.display = 'block'
-                        this.$refs.fileDetails.classList.add('file-details--open')
-                        this.$refs.uploadedFile.classList.add('uploaded-file--open')
-                        this.$refs.uploadedFileInfo.classList.add('uploaded-file__info--active')
-                    }, 500)
-                    this.$refs.previewImage.setAttribute('src', this.fileReader.result)
-                    this.$refs.uploadedFileName.innerHTML = this.file.name
                 })
                 this.fileReader.readAsDataURL(this.file)
             }
@@ -176,11 +184,21 @@ export default {
                     console.log('上传进度：', res.total.percent)
                     self.$refs.uploadedFileCounter.innerHTML = `${res.total.percent}%`
                 },
-                error(err) {
-                    console.error('上传失败：', err)
+                error() {
+                    alert('上传失败!')
                 },
                 complete(res) {
                     console.log('上传完成：', res.key)
+                    setTimeout(() => {
+                        self.uploadAreaOpen = true
+                        self.$refs.loadingText.style.display = 'none'
+                        self.$refs.previewImage.style.display = 'block'
+                        self.$refs.fileDetails.classList.add('file-details--open')
+                        self.$refs.uploadedFile.classList.add('uploaded-file--open')
+                        self.$refs.uploadedFileInfo.classList.add('uploaded-file__info--active')
+                    }, 500)
+                    self.$refs.previewImage.setAttribute('src', self.fileReader.result)
+                    self.$refs.uploadedFileName.innerHTML = self.file.name
                     self.link = 'http://tc.lihail.cn/' + res.key
                 }
             }
@@ -197,7 +215,7 @@ export default {
                 this.$refs.uploadedFileIconText.innerHTML = isImage[0]
             }
             if (isImage.length !== 0) {
-                if (this.file.size <= 10000000) {
+                if (this.file.size <= 50000000) {
                     return true
                 } else {
                     alert('图片大小不能超过10MB')
