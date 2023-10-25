@@ -104,7 +104,6 @@ import * as qiniu from 'qiniu-js'
 import Clipboard from 'clipboard'
 import { genUpToken } from '@/utils/qiniuToken'
 import ModalBox from '@/components/modal/ModalBox.vue'
-const clipboard = new Clipboard('.copy-btn')
 export default {
     components: { ModalBox },
     data() {
@@ -122,7 +121,8 @@ export default {
             },
             accessKey: '7oJHSC11-ZTQ8Vx8nZYC6gASfvHxhZwkJLfbPQmI',
             secretKey: '22atloGIfChSTyTrONAnoliMLONg-ZdOeod5SKju',
-            bucket: 'liuziting'
+            bucket: 'liuziting',
+            clipboard: null
         }
     },
     mounted() {},
@@ -130,11 +130,12 @@ export default {
         initData() {
             this.show = true
             this.$nextTick(() => {
-                clipboard.on('success', e => {
+                this.clipboard = new Clipboard('.copy-btn')
+                this.clipboard.on('success', e => {
                     console.log('Link copied!')
                     e.clearSelection()
                 })
-                clipboard.on('error', e => {
+                this.clipboard.on('error', e => {
                     console.error('Copy failed:', e.action)
                 })
 
@@ -228,7 +229,7 @@ export default {
         }
     },
     beforeDestroy() {
-        clipboard.destroy()
+        this.clipboard.destroy()
     }
 }
 </script>

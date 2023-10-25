@@ -764,5 +764,16 @@
             "颜色",
             "配色"
         ]
+    },
+    {
+        "name": "Raylink",
+        "type": "远程控制",
+        "link": "https://www.raylink.live/",
+        "rating": 9.5,
+        "slogan": "专为视觉行业打造的真高清、超流畅远程控制软件！",
+        "keywords": [
+            "远程控制",
+            "免费"
+        ]
     }
 ]
