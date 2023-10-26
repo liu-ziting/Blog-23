@@ -8,6 +8,10 @@ const router = new VueRouter({
             component: () => import('@/pages/HomeBlog.vue')
         },
         {
+            path: '/Home',
+            component: () => import('@/pages/HomeBlog.vue')
+        },
+        {
             path: '/Article',
             component: () => import('@/pages/MainList.vue')
         },
@@ -26,6 +30,10 @@ const router = new VueRouter({
         {
             path: '/ToolList',
             component: () => import('@/pages/ToolList.vue')
+        },
+        {
+            path: '/Design',
+            component: () => import('@/pages/EchartDesign.vue')
         },
     ]
 });

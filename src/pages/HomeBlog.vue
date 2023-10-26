@@ -2,7 +2,7 @@
     <div>
         <loading-box v-if="loading" />
         <main v-else id="app" class="content">
-            <nav class="nav">
+            <div class="nav">
                 <menu class="nav__controls">
                     <li
                         v-for="(active, menu) in menus"
@@ -58,7 +58,7 @@
                     </li>
                     <li class="nav__label nav__label--clear" @click="clearAllFilters">Clear all</li>
                 </menu>
-            </nav>
+            </div>
             <transition-group name="dropdown" tag="section" class="dropdown" :style="dropdown">
                 <menu
                     v-for="(options, filter) in filters"
@@ -253,7 +253,7 @@ $grey: #e7e7e7;
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
     color: #3d5358;
-    padding: 2% 20% 6% 20%;
+    padding: 0 20% 6% 20%;
     margin: 0 auto;
 
     &__list {

@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <nav>
+        <div class="nav">
             <router-link
                 v-for="(item, index) in navList"
                 :key="index"
@@ -9,7 +9,7 @@
             >
                 <a href="javascript:;">{{ item.name }}</a>
             </router-link>
-        </nav>
+        </div>
         <div class="main">
             <router-view></router-view>
         </div>
@@ -75,7 +75,7 @@ export default {
     transform: translateX(-50%);
     bottom: 15px;
 }
-nav {
+.nav {
     width: 100%;
     position: fixed;
     text-align: center;
