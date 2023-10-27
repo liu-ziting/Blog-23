@@ -25,7 +25,7 @@
         >
             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18" />
         </svg>
-        <footer>© 2023 Build my mindset system | liuziting</footer>
+        <footer>© 2023 已收录100+优秀网站 By liuziting</footer>
     </div>
 </template>
 
@@ -117,7 +117,7 @@ export default {
     width: 30px;
     position: fixed;
     bottom: 40px;
-    right: 40px;
+    left: 40px;
     z-index: 99999;
     cursor: pointer;
 }

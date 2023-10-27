@@ -334,7 +334,7 @@
     },
     {
         "name": "Hellogithub",
-        "type": "阅读",
+        "type": "创意",
         "link": "https://hellogithub.com/",
         "rating": 8.8,
         "slogan": "发现和分享有趣、入门级开源项目的平台",
@@ -348,7 +348,7 @@
     },
     {
         "name": "Producthunt",
-        "type": "阅读",
+        "type": "创意",
         "link": "https://www.producthunt.com/",
         "rating": 8.8,
         "slogan": "一个线上社区和平台,旨在向用户展示新兴科技产品、应用程序和创意项目",
@@ -486,16 +486,6 @@
         "slogan": "优雅的二维码生成器",
         "keywords": [
             "二维码"
-        ]
-    },
-    {
-        "name": "鸠摩搜索",
-        "type": "搜索引擎",
-        "link": "https://www.jiumodiary.com/",
-        "rating": 8,
-        "slogan": "无广告纯净文档搜索引擎",
-        "keywords": [
-            "文档搜索"
         ]
     },
     {
@@ -847,12 +837,106 @@
     },
     {
         "name": "TooolsDesign",
-        "type": "网站",
+        "type": "创意",
         "link": "https://www.toools.design/latest-resources",
         "rating": 8.8,
         "slogan": "发现有趣的网站和项目",
         "keywords": [
-            "网站"
+            "网站",
+            "发现创意"
+        ]
+    },
+    {
+        "name": "Spectrum",
+        "type": "配色",
+        "link": "https://spectrum.art/",
+        "rating": 8.1,
+        "slogan": "提供即用型网站配色方案，包括背景、标题和按钮",
+        "keywords": [
+            "配色",
+            "颜色"
+        ]
+    },
+    {
+        "name": "a-fresh",
+        "type": "创意",
+        "link": "https://www.a-fresh.website",
+        "rating": 8.3,
+        "slogan": "为了帮助设计师寻找灵感、学习和提高他们的设计技能",
+        "keywords": [
+            "网站",
+            "发现创意",
+            "灵感"
+        ]
+    },
+    {
+        "name": "prettyfolio",
+        "type": "创意",
+        "link": "https://www.prettyfolio.com/",
+        "rating": 8.4,
+        "slogan": "寻找灵感的创意人士或任何在特定领域寻找才华横溢的专业人士的终极目的地",
+        "keywords": [
+            "网站",
+            "发现创意",
+            "灵感"
+        ]
+    },
+    {
+        "name": "uiswipe",
+        "type": "创意",
+        "link": "https://uiswipe.com",
+        "rating": 8.6,
+        "slogan": "为企业、设计师和独立开拓者精心策划来自全球各地的顶级网站UI设计",
+        "keywords": [
+            "网站",
+            "发现创意",
+            "灵感"
+        ]
+    },
+    {
+        "name": "colorschemepalette",
+        "type": "配色",
+        "link": "https://www.colorschemepalette.com/",
+        "rating": 7.9,
+        "slogan": "设计师的最佳配色方案和调色板",
+        "keywords": [
+            "配色",
+            "颜色"
+        ]
+    },
+    {
+        "name": "coloreasily",
+        "type": "配色",
+        "link": "https://www.coloreasily.com/",
+        "rating": 8.1,
+        "slogan": "只需单击按钮即可发现完美的调色板",
+        "keywords": [
+            "配色",
+            "颜色"
+        ]
+    },
+    {
+        "name": "bestfolios",
+        "type": "创意",
+        "link": "https://www.bestfolios.com",
+        "rating": 8.4,
+        "slogan": "是最佳设计师作品集网站、简历和设计资源的集合",
+        "keywords": [
+            "网站",
+            "发现创意",
+            "灵感"
+        ]
+    },
+    {
+        "name": "landdding",
+        "type": "创意",
+        "link": "https://landdding.com",
+        "rating": 8.6,
+        "slogan": "聚网络社区并展示最好的网站",
+        "keywords": [
+            "网站",
+            "发现创意",
+            "灵感"
         ]
     }
 ]

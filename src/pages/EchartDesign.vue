@@ -34,7 +34,8 @@ export default {
         return {
             returnValue: ''
         }
-    }
+    },
+    mounted() {}
 }
 </script>
 
