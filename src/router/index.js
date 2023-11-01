@@ -1,5 +1,5 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 const router = new VueRouter({
     mode: 'history',
     routes: [
@@ -35,8 +35,12 @@ const router = new VueRouter({
             path: '/Design',
             component: () => import('@/pages/EchartDesign.vue')
         },
+        {
+            path: '/Movie',
+            component: () => import('@/pages/MovieList.vue')
+        }
     ]
-});
-Vue.use(VueRouter);
+})
+Vue.use(VueRouter)
 
-export default router;
+export default router

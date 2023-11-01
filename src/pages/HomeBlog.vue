@@ -148,7 +148,6 @@ export default {
             dataList
         }
     },
-
     computed: {
         activeMenu() {
             return Object.keys(this.menus).reduce(($$, set, i) => (this.menus[set] ? i : $$), -1)
@@ -174,7 +173,6 @@ export default {
             }
         }
     },
-
     watch: {
         activeMenu(index, from) {
             if (index === from) return
@@ -187,7 +185,6 @@ export default {
             })
         }
     },
-
     methods: {
         setFilter(filter, option) {
             console.log(option)

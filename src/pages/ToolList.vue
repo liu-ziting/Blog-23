@@ -1,6 +1,6 @@
 <template>
     <div class="wrap">
-        <span class="topBorder"></span>
+        <span class="topBorder">Tool</span>
         <div class="box">
             <h2>CDN,blog,qiniuyun</h2>
             <p>
@@ -26,7 +26,6 @@ export default {
     }
 }
 </script>
-
 
 <style lang="scss" scoped>
 span {

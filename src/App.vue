@@ -38,6 +38,7 @@ export default {
             backToTop: false,
             navList: [
                 { name: 'Home', to: '/' },
+                { name: 'Movie', to: '/Movie' },
                 { name: 'Article', to: '/Article' },
                 { name: 'Tool', to: '/ToolList' },
                 { name: 'About', to: '/About' }
@@ -120,6 +121,11 @@ export default {
     left: 40px;
     z-index: 99999;
     cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+    .backToTop {
+        left: 10px;
+    }
 }
 @keyframes in {
     0% {

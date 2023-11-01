@@ -163,6 +163,20 @@ body {
     background: #161616;
     display: block;
     cursor: pointer;
+    font-size: 12px;
+    transition: all 0.4s;
+    color: rgba(255, 255, 255, 0);
+    text-align: center;
+}
+
+.topBorder:hover {
+    color: rgba(255, 255, 255, 1);
+    height: 30px;
+    padding: 0 10px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    transition: all 0.6s;
 }
 
 .close {
@@ -189,5 +203,4 @@ footer {
     font-family: "ALIBABA";
     position: fixed;
     bottom: 10px;
-    background-color: #fff;
 }

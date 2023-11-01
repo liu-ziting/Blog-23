@@ -32,7 +32,7 @@ export default {
     },
     data() {
         return {
-            returnValue: ''
+            returnValue: {}
         }
     },
     mounted() {}
@@ -63,6 +63,7 @@ export default {
 }
 .pane-center {
     width: 50%;
+    min-width: 500px;
     max-width: 80%;
 }
 .pane-right {
@@ -82,7 +83,7 @@ export default {
         top: 50%;
         left: 50%;
         margin-top: -20px;
-        margin-left: -1.5px;
+        margin-left: -2px;
         border-left: 1px solid #ccc;
         border-right: 1px solid #ccc;
     }

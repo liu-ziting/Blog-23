@@ -1,7 +1,7 @@
 <template>
     <div class="wrap">
         <!-- <canvas class="canvas"></canvas> -->
-        <span class="topBorder"></span>
+        <span class="topBorder">Acticle</span>
         <!-- <h1 class="typing">Liu Ziting</h1> -->
         <div class="box" v-for="(item, index) in list" :key="index">
             <h2>{{ item.tag }}</h2>
@@ -60,7 +60,6 @@ export default {
     }
 }
 </script>
-
 
 <style lang="scss" scoped>
 .canvas {
