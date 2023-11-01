@@ -179,11 +179,11 @@ export default {
 
 .card {
     cursor: pointer;
-    width: calc(25% - 2rem);
+    width: calc(25% - 1.5rem);
     transform: rotate(0deg);
     transition: 0.15s ease-out;
     float: left;
-    margin: 1rem 1rem 3rem 1rem;
+    margin: 1rem 1.5rem 3rem 0rem;
     &:hover,
     &:focus-within {
         transform: translateY(4px) rotate(1deg);

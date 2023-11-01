@@ -126,6 +126,11 @@ export default {
     .backToTop {
         left: 10px;
     }
+    .nav {
+        a {
+            margin: 0 5px;
+        }
+    }
 }
 @keyframes in {
     0% {
