@@ -128,7 +128,7 @@ export default {
     }
     .nav {
         a {
-            margin: 0 5px;
+            margin: 0 3px;
         }
     }
 }
