@@ -242,7 +242,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
 $grey: #e7e7e7;
 .content {
@@ -400,7 +399,7 @@ $grey: #e7e7e7;
     margin: 0 1rem;
     padding: 2rem 0.5rem 1rem;
     border-bottom: 1px solid $grey;
-
+    overflow: hidden;
     &__controls {
         display: flex;
     }
