@@ -86,6 +86,7 @@ export default {
     line-height: 40px;
     background-color: #fff;
     z-index: 999;
+    overflow: hidden;
     a {
         font-family: 'Oswald', sans-serif;
         font-weight: 500;
