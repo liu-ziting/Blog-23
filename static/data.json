@@ -949,5 +949,16 @@
             "框架",
             "代码"
         ]
+    },
+    {
+        "name": "Uiball",
+        "type": "动画",
+        "link": "https://uiball.com/ldrs/?ref=producthunt",
+        "rating": 8.6,
+        "slogan": "过渡动画",
+        "keywords": [
+            "过渡",
+            "动画"
+        ]
     }
 ]
