@@ -41,6 +41,12 @@ export default {
                     class: 'underlined underlined--reverse'
                 },
                 {
+                    title: 'Js中?.、??、??=的用法及使用场景.',
+                    tag: 'Js',
+                    src: 'https://paragraph.xyz/@lzt/preview/QBemWyLa2SewXYa3PNQ4',
+                    class: 'underlined underlined--thin'
+                },
+                {
                     title: '前端工具类网站.',
                     tag: 'Website',
                     src: 'https://gamma.app/public/-8sse4vampaeyogm',
