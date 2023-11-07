@@ -80,13 +80,13 @@ export default {
     width: 100%;
     position: fixed;
     text-align: center;
-    height: 40px;
-    padding-top: 20px;
+    height: 60px;
     top: 0;
-    line-height: 40px;
+    line-height: 60px;
     background-color: #fff;
     z-index: 999;
     overflow: hidden;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
     a {
         font-family: 'Oswald', sans-serif;
         font-weight: 500;
@@ -119,7 +119,7 @@ export default {
     width: 30px;
     position: fixed;
     bottom: 40px;
-    left: 40px;
+    right: 20px;
     z-index: 99999;
     cursor: pointer;
 }
