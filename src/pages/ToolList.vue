@@ -8,19 +8,29 @@
             </p>
         </div>
         <div class="box">
+            <h2>Excel</h2>
+            <p>
+                <span class="underlined underlined--thin" @click="$refs.excelBox.initData()">
+                    2.在线Excel(可导出)
+                </span>
+            </p>
+        </div>
+        <div class="box">
             <h2>ing</h2>
             <p>
                 <span class="underlined underlined--thin"> 2.其他正在开发中... </span>
             </p>
         </div>
         <upload-pic ref="uploadPic" />
+        <excel-box ref="excelBox" />
     </div>
 </template>
 
 <script>
 import UploadPic from '@/components/modal/UploadPic.vue'
+import ExcelBox from '@/components/modal/ExcelBox.vue'
 export default {
-    components: { UploadPic },
+    components: { UploadPic, ExcelBox },
     data() {
         return {}
     }

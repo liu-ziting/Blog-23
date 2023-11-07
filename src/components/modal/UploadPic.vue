@@ -94,18 +94,15 @@
                 </div>
             </div>
         </div>
-        <modal-box />
     </div>
 </template>
-
 
 <script>
 import * as qiniu from 'qiniu-js'
 import Clipboard from 'clipboard'
 import { genUpToken } from '@/utils/qiniuToken'
-import ModalBox from '@/components/modal/ModalBox.vue'
 export default {
-    components: { ModalBox },
+    components: {},
     data() {
         return {
             show: false,
@@ -233,7 +230,6 @@ export default {
     }
 }
 </script>
-
 
 <style lang="scss" scoped>
 $clr-white: rgb(255, 255, 255);
