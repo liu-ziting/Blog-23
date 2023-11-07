@@ -111,9 +111,7 @@ export default {
             XLSX.writeFile(new_wb, 'demo.xlsx')
         }
     },
-    mounted() {
-        this.init()
-    }
+    mounted() {}
 }
 </script>
 

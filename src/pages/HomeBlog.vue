@@ -2,7 +2,7 @@
     <div>
         <loading-box v-if="loading" />
         <main v-else id="app" class="content">
-            <div class="nav">
+            <div class="nav noneScroll">
                 <menu class="nav__controls">
                     <li
                         v-for="(active, menu) in menus"
@@ -59,7 +59,7 @@
                     <li class="nav__label nav__label--clear" @click="clearAllFilters">Clear all</li>
                 </menu>
             </div>
-            <transition-group name="dropdown" tag="section" class="dropdown" :style="dropdown">
+            <transition-group name="dropdown" tag="section" class="dropdown noneScroll" :style="dropdown">
                 <menu
                     v-for="(options, filter) in filters"
                     class="filters"
@@ -502,7 +502,6 @@ $grey: #e7e7e7;
     flex-wrap: wrap;
     align-items: flex-start;
     max-height: 270px;
-    overflow-y: scroll;
     &__item {
         margin-top: 0.5rem;
         margin-right: 0.5rem;
