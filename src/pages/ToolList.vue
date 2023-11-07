@@ -10,8 +10,14 @@
         <div class="box">
             <h2>Excel</h2>
             <p>
-                <span class="underlined underlined--thin" @click="$refs.excelBox.initData()">
-                    2.在线Excel(可导出)
+                <span class="underlined underlined--thin" @click="$refs.excelBox.initData()"> 2.在线Excel </span>
+            </p>
+        </div>
+        <div class="box">
+            <h2>Code</h2>
+            <p>
+                <span class="underlined underlined--thin" @click="openLink('https://codepen.io/denic/pen/GRoOxbM')">
+                    3.在线代码编辑预览
                 </span>
             </p>
         </div>
@@ -33,6 +39,11 @@ export default {
     components: { UploadPic, ExcelBox },
     data() {
         return {}
+    },
+    methods: {
+        openLink(link) {
+            window.open(link)
+        }
     }
 }
 </script>

@@ -112,6 +112,7 @@ export default {
         animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
     }
     .active:before {
+        opacity: 1;
         animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
     }
 }

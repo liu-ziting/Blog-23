@@ -13,10 +13,14 @@
             </svg>
         </span>
         <div class="container">
-            <!--web spreadsheet组件-->
-            <div ref="sheetContainer" class="spreadsheet" id="x-spreadsheet-demo"></div>
+            <div ref="sheetContainer" class="spreadsheet" id="xSpreadsheet"></div>
         </div>
         <div class="toolbar">
+            <!-- <input
+                type="file"
+                @change="importExcel"
+                accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+            /> -->
             <button @click="exportExcel">导出xlsx</button>
         </div>
     </div>
@@ -75,7 +79,7 @@ export default {
     methods: {
         init() {
             Spreadsheet.locale('zh-cn', zhCN)
-            this.xs = new Spreadsheet('#x-spreadsheet-demo', this.options).loadData({}).change(data => {
+            this.xs = new Spreadsheet('#xSpreadsheet', this.options).loadData({}).change(data => {
                 console.log(data)
             })
             this.xs.validate()
@@ -109,6 +113,35 @@ export default {
                 XLSX.utils.book_append_sheet(new_wb, ws, xws.name)
             })
             XLSX.writeFile(new_wb, 'demo.xlsx')
+        },
+        importExcel(event) {
+            let files = event.target.files
+            if (files && files.length > 0) {
+                let file = files[0]
+                let reader = new FileReader()
+                reader.onload = event => {
+                    let data = event.target.result
+                    let workbook = XLSX.read(data, { type: 'binary' })
+
+                    workbook.SheetNames.forEach(sheetName => {
+                        let worksheet = workbook.Sheets[sheetName]
+                        let data = XLSX.utils.sheet_to_json(worksheet, { header: 1, cellStyles: true })
+                        let json = []
+                        let headers = data[0]
+                        for (let i = 1; i < data.length; i++) {
+                            let obj = {}
+                            for (let j = 0; j < headers.length; j++) {
+                                obj[headers[j]] = data[i][j]
+                            }
+                            json.push(obj)
+                        }
+
+                        let sheet = this.xs.sheet
+                        XLSX.utils.sheet_add_json(sheet, json, { skipHeader: true, origin: 'A2' })
+                    })
+                }
+                reader.readAsBinaryString(file)
+            }
         }
     },
     mounted() {}
