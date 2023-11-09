@@ -2,6 +2,10 @@
 
 https://lztblog.netlify.app/
 
+# Icon
+
+https://feathericons.com/
+
 ## Project setup
 
 ```

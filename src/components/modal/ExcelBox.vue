@@ -163,6 +163,7 @@ export default {
     }
     .close {
         top: 3px;
+        z-index: 9999;
     }
 }
 .container {
