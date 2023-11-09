@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index'
-
+import 'nprogress/nprogress.css'
 import '../styles/main.css'
 import '../styles/fonts.css'
 import '../styles/hover.scss'

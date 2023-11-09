@@ -204,3 +204,7 @@ footer {
     position: fixed;
     bottom: 10px;
 }
+
+#nprogress .bar {
+    background: #161616 !important;
+}
