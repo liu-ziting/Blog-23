@@ -24,7 +24,7 @@
         <div class="box">
             <h2>ing</h2>
             <p>
-                <span class="underlined underlined--thin"> 2.其他... </span>
+                <span class="underlined underlined--thin"> 4.其他... </span>
             </p>
         </div>
         <upload-pic ref="uploadPic" />

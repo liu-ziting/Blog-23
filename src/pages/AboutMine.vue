@@ -8,7 +8,7 @@
                 <label :for="index" class="panel-title">
                     <span class="underlined underlined--offset">{{ item.title }}</span></label
                 >
-                <div class="panel-content">{{ item.content }}</div>
+                <div class="panel-content" v-html="item.content"></div>
             </div>
         </div>
     </div>
@@ -25,11 +25,12 @@ export default {
                 },
                 {
                     title: '博客平台是用什么框架构建的？',
-                    content: '博客平台使用VUE框架构建，UI效果自己手撸，网站分类纯前端查询'
+                    content: '博客平台使用VUE构建，网站分类纯前端查询'
                 },
                 {
                     title: '该项目部署在什么平台？',
-                    content: '博客平台部署在Netlify上'
+                    content:
+                        '博客平台部署在Netlify上 <br/> 备用地址：https://blog-3d60.onrender.com，https://blog-23-flame.vercel.app'
                 },
                 {
                     title: '怎样帮助我一起扩充网站的收录？',
